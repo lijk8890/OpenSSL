@@ -164,6 +164,9 @@ static int pkey_ec_sign(EVP_PKEY_CTX *ctx, unsigned char *sig, size_t *siglen,
     EC_PKEY_CTX *dctx = ctx->data;
     EC_KEY *ec = ctx->pkey->pkey.ec;
 
+    if(ec->group->curve_name == NID_sm2p256v1)
+        return 0;
+
     if (!sig) {
         *siglen = ECDSA_size(ec);
         return 1;
@@ -192,6 +195,9 @@ static int pkey_ec_verify(EVP_PKEY_CTX *ctx,
     int ret, type;
     EC_PKEY_CTX *dctx = ctx->data;
     EC_KEY *ec = ctx->pkey->pkey.ec;
+
+    if(ec->group->curve_name == NID_sm2p256v1)
+        return 0;
 
     if (dctx->md)
         type = EVP_MD_type(dctx->md);

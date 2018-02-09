@@ -142,6 +142,10 @@ int SSL_library_init(void)
     EVP_add_digest(EVP_sha());
     EVP_add_digest(EVP_dss());
 #endif
+    EVP_add_digest(EVP_sm3());
+    EVP_add_cipher(EVP_sms4());
+    EVP_add_cipher(EVP_sms4_cbc());
+    EVP_add_cipher(EVP_sms4_ecb());
 #ifndef OPENSSL_NO_COMP
     /*
      * This will initialise the built-in compression algorithms. The value

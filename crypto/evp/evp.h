@@ -902,6 +902,12 @@ const EVP_CIPHER *EVP_seed_cfb128(void);
 const EVP_CIPHER *EVP_seed_ofb(void);
 # endif
 
+const EVP_MD *EVP_sm3(void);
+
+const EVP_CIPHER *EVP_sms4(void);
+const EVP_CIPHER *EVP_sms4_cbc(void);
+const EVP_CIPHER *EVP_sms4_ecb(void);
+
 void OPENSSL_add_all_algorithms_noconf(void);
 void OPENSSL_add_all_algorithms_conf(void);
 

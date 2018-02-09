@@ -563,6 +563,8 @@ SSL_CTX_callback_ctrl(ssl,SSL_CTRL_SET_TLSEXT_TICKET_KEY_CB,(void (*)(void))cb)
 # define TLS1_CK_ECDH_RSA_WITH_AES_128_GCM_SHA256        0x0300C031
 # define TLS1_CK_ECDH_RSA_WITH_AES_256_GCM_SHA384        0x0300C032
 
+# define GM1_CK_ECDHE_SM4_SM3                            0x0300E011
+# define GM1_CK_ECC_SM4_SM3                              0x0300E013
 /*
  * XXX * Backward compatibility alert: + * Older versions of OpenSSL gave
  * some DHE ciphers names with "EDH" + * instead of "DHE".  Going forward, we
@@ -712,6 +714,9 @@ SSL_CTX_callback_ctrl(ssl,SSL_CTRL_SET_TLSEXT_TICKET_KEY_CB,(void (*)(void))cb)
 # define TLS1_TXT_ECDHE_RSA_WITH_AES_256_GCM_SHA384      "ECDHE-RSA-AES256-GCM-SHA384"
 # define TLS1_TXT_ECDH_RSA_WITH_AES_128_GCM_SHA256       "ECDH-RSA-AES128-GCM-SHA256"
 # define TLS1_TXT_ECDH_RSA_WITH_AES_256_GCM_SHA384       "ECDH-RSA-AES256-GCM-SHA384"
+
+# define GM1_TXT_ECDHE_SM4_SM3                           "ECDHE-SM4-SM3"
+# define GM1_TXT_ECC_SM4_SM3                             "ECC-SM4-SM3"
 
 # define TLS_CT_RSA_SIGN                 1
 # define TLS_CT_DSS_SIGN                 2

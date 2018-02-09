@@ -256,7 +256,8 @@ static int nid_list[] = {
     NID_secp521r1,              /* secp521r1 (25) */
     NID_brainpoolP256r1,        /* brainpoolP256r1 (26) */
     NID_brainpoolP384r1,        /* brainpoolP384r1 (27) */
-    NID_brainpoolP512r1         /* brainpool512r1 (28) */
+    NID_brainpoolP512r1,        /* brainpool512r1 (28) */
+    NID_sm2p256v1               /* sm2p256v1 (29) */
 };
 
 static const unsigned char ecformats_default[] = {
@@ -285,6 +286,7 @@ static const unsigned char eccurves_auto[] = {
     0, 9,                       /* sect283k1 (9) */
     0, 10,                      /* sect283r1 (10) */
 # endif
+    0, 29,                      /* sm2p256v1 (29) */
 };
 
 static const unsigned char eccurves_all[] = {
@@ -327,6 +329,7 @@ static const unsigned char eccurves_all[] = {
     0, 2,                       /* sect163r1 (2) */
     0, 3,                       /* sect163r2 (3) */
 # endif
+    0, 29,                      /* sm2p256v1 (29) */
 };
 
 static const unsigned char suiteb_curves[] = {
@@ -374,6 +377,7 @@ static const unsigned char fips_curves_default[] = {
     0, 15,                      /* secp160k1 (15) */
     0, 16,                      /* secp160r1 (16) */
     0, 17,                      /* secp160r2 (17) */
+    0, 29,                      /* sm2p256v1 (29) */
 };
 # endif
 
@@ -446,6 +450,8 @@ int tls1_ec_nid2curve_id(int nid)
         return 27;
     case NID_brainpoolP512r1:  /* brainpool512r1 (28) */
         return 28;
+    case NID_sm2p256v1:        /* sm2p256v1 (29) */
+        return 29;
     default:
         return 0;
     }
@@ -683,7 +689,7 @@ int tls1_set_curves(unsigned char **pext, size_t *pextlen,
     return 1;
 }
 
-# define MAX_CURVELIST   28
+# define MAX_CURVELIST   29
 
 typedef struct {
     size_t nidcnt;

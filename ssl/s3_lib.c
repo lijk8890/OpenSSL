@@ -2945,6 +2945,37 @@ OPENSSL_GLOBAL SSL_CIPHER ssl3_ciphers[] = {
      256},
 #endif
 
+    /* Cipher E011 */
+    {
+     1,
+     GM1_TXT_ECDHE_SM4_SM3,
+     GM1_CK_ECDHE_SM4_SM3,
+     SSL_kECDHEm,
+     SSL_aSM2,
+     SSL_SMS4,
+     SSL_SM3,
+     SSL_GMV1_1,
+     SSL_NOT_EXP | SSL_HIGH,
+     SSL_HANDSHAKE_MAC_SM3 | TLS1_PRF_SM3,
+     128,
+     128,
+     },
+
+    /* Cipher E013 */
+    {
+     1,
+     GM1_TXT_ECC_SM4_SM3,
+     GM1_CK_ECC_SM4_SM3,
+     SSL_kECCm,
+     SSL_aSM2,
+     SSL_SMS4,
+     SSL_SM3,
+     SSL_GMV1_1,
+     SSL_NOT_EXP | SSL_HIGH,
+     SSL_HANDSHAKE_MAC_SM3 | TLS1_PRF_SM3,
+     128,
+     128,
+     },
 /* end of list */
 };
 

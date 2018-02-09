@@ -164,11 +164,12 @@
 #define SSL_ENC_SEED_IDX        11
 #define SSL_ENC_AES128GCM_IDX   12
 #define SSL_ENC_AES256GCM_IDX   13
-#define SSL_ENC_NUM_IDX         14
+#define SSL_ENC_SMS4_IDX        14
+#define SSL_ENC_NUM_IDX         15
 
 static const EVP_CIPHER *ssl_cipher_methods[SSL_ENC_NUM_IDX] = {
     NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
-    NULL, NULL
+    NULL, NULL, NULL
 };
 
 #define SSL_COMP_NULL_IDX       0
@@ -183,13 +184,14 @@ static STACK_OF(SSL_COMP) *ssl_comp_methods = NULL;
 #define SSL_MD_GOST89MAC_IDX 3
 #define SSL_MD_SHA256_IDX 4
 #define SSL_MD_SHA384_IDX 5
+#define SSL_MD_SM3_IDX 6
 /*
  * Constant SSL_MAX_DIGEST equal to size of digests array should be defined
  * in the ssl_locl.h
  */
 #define SSL_MD_NUM_IDX  SSL_MAX_DIGEST
 static const EVP_MD *ssl_digest_methods[SSL_MD_NUM_IDX] = {
-    NULL, NULL, NULL, NULL, NULL, NULL
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL
 };
 
 /*
@@ -199,17 +201,17 @@ static const EVP_MD *ssl_digest_methods[SSL_MD_NUM_IDX] = {
  */
 static int ssl_mac_pkey_id[SSL_MD_NUM_IDX] = {
     EVP_PKEY_HMAC, EVP_PKEY_HMAC, EVP_PKEY_HMAC, NID_undef,
-    EVP_PKEY_HMAC, EVP_PKEY_HMAC
+    EVP_PKEY_HMAC, EVP_PKEY_HMAC, EVP_PKEY_HMAC
 };
 
 static int ssl_mac_secret_size[SSL_MD_NUM_IDX] = {
-    0, 0, 0, 0, 0, 0
+    0, 0, 0, 0, 0, 0, 0
 };
 
 static int ssl_handshake_digest_flag[SSL_MD_NUM_IDX] = {
     SSL_HANDSHAKE_MAC_MD5, SSL_HANDSHAKE_MAC_SHA,
     SSL_HANDSHAKE_MAC_GOST94, 0, SSL_HANDSHAKE_MAC_SHA256,
-    SSL_HANDSHAKE_MAC_SHA384
+    SSL_HANDSHAKE_MAC_SHA384, SSL_HANDSHAKE_MAC_SM3
 };
 
 #define CIPHER_ADD      1
@@ -459,6 +461,11 @@ void ssl_load_ciphers(void)
     ssl_digest_methods[SSL_MD_SHA384_IDX] = EVP_get_digestbyname(SN_sha384);
     ssl_mac_secret_size[SSL_MD_SHA384_IDX] =
         EVP_MD_size(ssl_digest_methods[SSL_MD_SHA384_IDX]);
+
+    ssl_cipher_methods[SSL_ENC_SMS4_IDX] = EVP_sms4();
+    ssl_digest_methods[SSL_MD_SM3_IDX] = EVP_sm3();
+    ssl_mac_secret_size[SSL_MD_SM3_IDX] =
+        EVP_MD_size(ssl_digest_methods[SSL_MD_SM3_IDX]);
 }
 
 #ifndef OPENSSL_NO_COMP
@@ -581,6 +588,9 @@ int ssl_cipher_get_evp(const SSL_SESSION *s, const EVP_CIPHER **enc,
     case SSL_AES256GCM:
         i = SSL_ENC_AES256GCM_IDX;
         break;
+    case SSL_SMS4:
+        i = SSL_ENC_SMS4_IDX;
+        break;
     default:
         i = -1;
         break;
@@ -613,6 +623,9 @@ int ssl_cipher_get_evp(const SSL_SESSION *s, const EVP_CIPHER **enc,
         break;
     case SSL_GOST89MAC:
         i = SSL_MD_GOST89MAC_IDX;
+        break;
+    case SSL_SM3:
+        i = SSL_MD_SM3_IDX;
         break;
     default:
         i = -1;
@@ -815,6 +828,8 @@ static void ssl_cipher_get_disabled(unsigned long *mkey, unsigned long *auth,
              || ssl_mac_pkey_id[SSL_MD_GOST89MAC_IDX] ==
              NID_undef) ? SSL_GOST89MAC : 0;
 
+    *enc |= (ssl_cipher_methods[SSL_ENC_SMS4_IDX] == NULL) ? SSL_SMS4 : 0;
+    *mac |= (ssl_digest_methods[SSL_MD_SM3_IDX] == NULL) ? SSL_SM3 : 0;
 }
 
 static void ssl_cipher_collect_ciphers(const SSL_METHOD *ssl_method,
