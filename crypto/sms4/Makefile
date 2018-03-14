@@ -17,14 +17,14 @@ TEST=sms4test.c
 APPS=
 
 LIB=$(TOP)/libcrypto.a
-LIBSRC=	sms4.c
 
-LIBOBJ=	sms4.o
+LIBSRC=	sms4_cbc.c sms4_ecb.c sms4_setkey.c sms4_enc.c
+LIBOBJ=	sms4_cbc.o sms4_ecb.o sms4_setkey.o sms4_enc.o
 
 SRC= $(LIBSRC)
 
 EXHEADER= sms4.h
-HEADER=	sms4_locl.h $(EXHEADER)
+HEADER=	sms4_lcl.h $(EXHEADER)
 
 ALL=    $(GENERAL) $(SRC) $(HEADER)
 
@@ -76,6 +76,3 @@ clean:
 	rm -f *.o */*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-
-sms4.o: ../../include/openssl/crypto.h sms4_locl.h sms4.h sms4.c
-sms4test.o: ../../include/openssl/crypto.h sms4_locl.h sms4.h sms4test.c

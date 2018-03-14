@@ -17,14 +17,14 @@ TEST=sm3test.c
 APPS=
 
 LIB=$(TOP)/libcrypto.a
-LIBSRC=	sm3.c
 
+LIBSRC=	sm3.c
 LIBOBJ=	sm3.o
 
 SRC= $(LIBSRC)
 
 EXHEADER= sm3.h
-HEADER=	sm3_locl.h $(EXHEADER)
+HEADER=	byteorder.h $(EXHEADER)
 
 ALL=    $(GENERAL) $(SRC) $(HEADER)
 
@@ -76,6 +76,3 @@ clean:
 	rm -f *.o */*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-
-sm3.o: ../../include/openssl/crypto.h sm3_locl.h sm3.h sm3.c
-sm3test.o: ../../include/openssl/crypto.h sm3_locl.h sm3.h sm3test.c

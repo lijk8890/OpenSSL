@@ -2,15 +2,44 @@
 #define __SM2_H__
 
 #include <openssl/ec.h>
+#include <openssl/sm3.h>
+
+#ifdef  __cplusplus
+extern "C" {
+#endif
+
+int get_z(const char *id, int id_len, unsigned char *pubkey, int pubkey_len, unsigned char md[SM3_DIGEST_LENGTH]);
+
+int kdf_sm3(unsigned char *in, int inlen, unsigned char *out, int outlen);
+
+void print_bn(BIGNUM *bn);
+
+void print_point(const EC_GROUP *group, EC_POINT *point);
 
 int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec);
 
 int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec);
 
-int SM2_encrypt(const EVP_MD *kdf_md, const EVP_MD *mac_md, point_conversion_form_t point_form, const unsigned char *in, int inlen, unsigned char *out, int *outlen, EC_KEY *ec);
+int SM2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, int *outlen, EC_KEY *ec);
 
-int SM2_decrypt(const EVP_MD *kdf_md, const EVP_MD *mac_md, point_conversion_form_t point_form, const unsigned char *in, int inlen, unsigned char *out, int *outlen, EC_KEY *ec);
+int SM2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, int *outlen, EC_KEY *ec);
 
-int SM2_compute_key(unsigned char *out, int outlen, const EC_POINT *point, EC_KEY *ec);
+int sm2_compute_key(                                                    \
+    const EC_GROUP *group, const char *id, int id_len,                  \
+    unsigned char *self_tmp_prvkey, int self_tmp_prvkey_len,            \
+    unsigned char *self_tmp_pubkey, int self_tmp_pubkey_len,            \
+    unsigned char *self_enc_prvkey, int self_enc_prvkey_len,            \
+    unsigned char *self_enc_pubkey, int self_enc_pubkey_len,            \
+    unsigned char *peer_tmp_pubkey, int peer_tmp_pubkey_len,            \
+    unsigned char *peer_enc_pubkey, int peer_enc_pubkey_len,            \
+    unsigned char *session_key, int session_key_len,                    \
+    int is_server                                                       \
+    );
+
+int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out, int outlen);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

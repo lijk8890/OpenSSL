@@ -1,6 +1,6 @@
-/* crypto/sm3/sm3.h */
+/* crypto/sms4/sms4_enc.c */
 /* ====================================================================
- * Copyright (c) 2014 - 2015 The GmSSL Project.  All rights reserved.
+ * Copyright (c) 2014 - 2016 The GmSSL Project.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -46,40 +46,41 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  * ====================================================================
- *
  */
 
-#ifndef HEADER_SM3_H
-#define HEADER_SM3_H
-
-#define SM3_DIGEST_LENGTH	32
-#define SM3_BLOCK_SIZE		64
-
-#include <sys/types.h>
-#include <stdint.h>
-#include <string.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include "sms4.h"
+#include "sms4_lcl.h"
 
 
-typedef struct {
-	uint32_t digest[8];
-	int nblocks;
-	unsigned char block[64];
-	int num;
-} sm3_ctx_t;
+#define L32(x)						\
+	((x) ^						\
+	ROT32((x),  2) ^				\
+	ROT32((x), 10) ^				\
+	ROT32((x), 18) ^				\
+	ROT32((x), 24))
 
-int sm3_init(sm3_ctx_t *ctx);
-int sm3_update(sm3_ctx_t *ctx, const unsigned char* data, size_t data_len);
-int sm3_final(sm3_ctx_t *ctx, unsigned char digest[SM3_DIGEST_LENGTH]);
-void sm3_compress(uint32_t digest[8], const unsigned char block[SM3_BLOCK_SIZE]);
-void sm3(const unsigned char *data, size_t datalen, unsigned char digest[SM3_DIGEST_LENGTH]);
-void SM3(const unsigned char *data, size_t datalen, unsigned char digest[SM3_DIGEST_LENGTH]);
+#define ROUND(x0, x1, x2, x3, x4, i)			\
+	x4 = x1 ^ x2 ^ x3 ^ *(rk + i);			\
+	x4 = S32(x4);					\
+	x4 = x0 ^ L32(x4)
 
-#ifdef __cplusplus
+void sms4_encrypt(const unsigned char *in, unsigned char *out, const sms4_key_t *key)
+{
+	uint32_t *rk = key->rk;
+	uint32_t x0, x1, x2, x3, x4;
+
+	x0 = GET32(in     );
+	x1 = GET32(in +  4);
+	x2 = GET32(in +  8);
+	x3 = GET32(in + 12);
+
+	ROUNDS(x0, x1, x2, x3, x4);
+
+	PUT32(x0, out     );
+	PUT32(x4, out +  4);
+	PUT32(x3, out +  8);
+	PUT32(x2, out + 12);
+
+	x0 = x1 = x2 = x3 = x4 = 0;
 }
-#endif
-#endif
 

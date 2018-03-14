@@ -524,8 +524,12 @@
 # define SSL_PKEY_GOST94         6
 # define SSL_PKEY_GOST01         7
 # define SSL_PKEY_ECC_ENC        8      //加密证书
-# define SSL_PKEY_ECC_SIGN       9      //签名证书
+# define SSL_PKEY_ECC_SGN        9      //签名证书
 # define SSL_PKEY_NUM            10
+
+# define SSL_HANDSHAKE_RSA       0
+# define SSL_HANDSHAKE_ECC       SSL_HANDSHAKE_RSA
+# define SSL_HANDSHAKE_SM2       1
 
 /*-
  * SSL_kRSA <- RSA_ENC | (RSA_TMP & RSA_SIGN) |

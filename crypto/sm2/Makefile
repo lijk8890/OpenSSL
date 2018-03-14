@@ -17,14 +17,14 @@ TEST=sm2test.c
 APPS=
 
 LIB=$(TOP)/libcrypto.a
-LIBSRC=	sm2.c
 
-LIBOBJ=	sm2.o
+LIBSRC=	sm2_sign.c sm2_enc.c sm2_ecdh.c sm2_lib.c
+LIBOBJ=	sm2_sign.o sm2_enc.o sm2_ecdh.o sm2_lib.o
 
 SRC= $(LIBSRC)
 
 EXHEADER= sm2.h
-HEADER=	sm2_locl.h $(EXHEADER)
+HEADER=	$(EXHEADER)
 
 ALL=    $(GENERAL) $(SRC) $(HEADER)
 
@@ -76,6 +76,3 @@ clean:
 	rm -f *.o */*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-
-sm2.o: ../../include/openssl/crypto.h sm2_locl.h sm2.h sm2.c
-sm2test.o: ../../include/openssl/crypto.h sm2_locl.h sm2.h sm2test.c

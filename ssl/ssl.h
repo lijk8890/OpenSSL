@@ -536,6 +536,8 @@ struct ssl_session_st {
      * ssl_asn1.c).
      */
     X509 *peer;
+//  X509 *peer_enc;
+    X509 *peer_sgn;
     /*
      * when app_verify_callback accepts a session where the peer's
      * certificate is not ok, we must remember the error for session reuse:

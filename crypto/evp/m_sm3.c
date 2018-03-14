@@ -14,7 +14,7 @@ static int update(EVP_MD_CTX *ctx, const void *in, size_t inlen)
 
 static int final(EVP_MD_CTX *ctx, unsigned char *md)
 {
-    return sm3_final(md, ctx->md_data);
+    return sm3_final(ctx->md_data, md);
 }
 
 static const EVP_MD sm3_md = {
@@ -31,7 +31,7 @@ static const EVP_MD sm3_md = {
     (evp_sign_method*)SM2_verify,
     {EVP_PKEY_EC, 0, 0, 0},
     SM3_BLOCK_SIZE,
-    sizeof(EVP_MD*) + sizeof(SM3_CTX),
+    sizeof(EVP_MD*) + sizeof(sm3_ctx_t),
 };
 
 const EVP_MD *EVP_sm3(void)

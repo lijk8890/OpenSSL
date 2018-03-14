@@ -173,6 +173,10 @@ extern "C" {
 # define TLS1_2_VERSION_MAJOR            0x03
 # define TLS1_2_VERSION_MINOR            0x03
 
+# define GMV1_1_VERSION                  0x0101
+# define GMV1_1_VERSION_MAJOR            0x01
+# define GMV1_1_VERSION_MINOR            0x01
+
 # define TLS1_get_version(s) \
                 ((s->version >> 8) == TLS1_VERSION_MAJOR ? s->version : 0)
 
