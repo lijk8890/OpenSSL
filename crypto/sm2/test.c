@@ -20,7 +20,10 @@
 int main(int argc, char *argv[])
 {
     int ret = 0;
-    unsigned char out[48] = {0};
+    int inlen = 0;
+    int outlen = 0;
+    unsigned char in[256] = "0123456789";
+    unsigned char out[256] = {0};
     unsigned char prvkey[32] = {
         0x64, 0x06, 0xa2, 0x5a, 0xde, 0xe3, 0xe9, 0x85,
         0x56, 0x6a, 0x17, 0xf1, 0xca, 0xbd, 0xd2, 0xee,
@@ -38,22 +41,108 @@ int main(int argc, char *argv[])
         0x5f, 0x5b, 0x86, 0xc1, 0x16, 0x4d, 0x30, 0x34,
         0x0c
     };
+    unsigned char md[32] = {
+        0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,
+        0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,
+        0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,
+        0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+    };
 
-    int      nid = 0;
-    EC_KEY  *ecdh = 0;
+    EC_KEY  *ec = 0;
     const EC_GROUP *group = NULL;
+    EC_POINT *point = NULL;
+    BIGNUM *bn = NULL;
 
-    nid = OBJ_sn2nid("sm2p256v1");
-    ecdh = EC_KEY_new_by_curve_name(nid);
-    group = EC_KEY_get0_group(ecdh);
+    ec = EC_KEY_new_by_curve_name(NID_sm2p256v1);
+    EC_KEY_set_asn1_flag(ec, OPENSSL_EC_NAMED_CURVE);
+    group = EC_KEY_get0_group(ec);
+
+    // 设置公钥
+    point = EC_POINT_new(group);
+    if(!EC_POINT_oct2point(group, point, pubkey, 65, NULL))
+    {
+        fprintf(stderr, "%s %s:%u - EC_POINT_oct2point failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    EC_KEY_set_public_key(ec, point);
+
+    // 设置私钥
+    bn = BN_bin2bn(prvkey, 32, NULL);
+    if(bn == NULL)
+    {
+        fprintf(stderr, "%s %s:%u - BN_bin2bn failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    EC_KEY_set_private_key(ec, bn);
+
+    // 校验密钥
+    if(!EC_KEY_check_key(ec))
+    {
+        fprintf(stderr, "%s %s:%u - EC_KEY_check_key failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
 
 do{
-    ret = sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 1);
+    // 客户端
+    ret = sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 0);
+    if(ret <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
     PRINT_HEX(out, ret);
+
+    // 服务端
+    ret = sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 1);
+    if(ret <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    PRINT_HEX(out, ret);
+    
+    //加密
+    outlen = SM2_encrypt(NID_sm3, in, 10, out, ec);
+    if(outlen <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - SM2_sign failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    PRINT_HEX(out, outlen);
+
+    //解密
+    inlen = SM2_decrypt(NID_sm3, out, outlen, in, ec);
+    if(inlen <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - SM2_sign failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    PRINT_HEX(in, inlen);
+
+    // 签名
+    ret = SM2_sign(NID_sm3, md, 32, out, &outlen, ec);
+    if(ret <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - SM2_sign failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    PRINT_HEX(out, outlen);
+
+    // 验签
+    ret = SM2_verify(NID_sm3, md, 32, out, outlen, ec);
+    if(ret <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - SM2_verify failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    PRINT_HEX(md, 32);
 
     usleep(100);
 }while(0);
 
-    EC_KEY_free(ecdh);
+EndP:
+    if(bn) BN_free(bn);
+    if(point) EC_POINT_free(point);
+    if(ec) EC_KEY_free(ec);
     return 0;
 }

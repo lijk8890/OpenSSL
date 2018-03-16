@@ -2,7 +2,7 @@
 #define HEADER_BYTEORDER_H
 
 
-#ifdef CPU_BIGENDIAN
+#if __BYTE_ORDER == __BIG_ENDIAN
 
 #define cpu_to_be16(v) (v)
 #define cpu_to_be32(v) (v)

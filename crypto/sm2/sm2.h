@@ -20,9 +20,9 @@ int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *si
 
 int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec);
 
-int SM2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, int *outlen, EC_KEY *ec);
+int SM2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
 
-int SM2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, int *outlen, EC_KEY *ec);
+int SM2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
 
 int sm2_compute_key(                                                    \
     const EC_GROUP *group, const char *id, int id_len,                  \
@@ -36,7 +36,7 @@ int sm2_compute_key(                                                    \
     int is_server                                                       \
     );
 
-int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out, int outlen);
+int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out);
 
 #ifdef __cplusplus
 }

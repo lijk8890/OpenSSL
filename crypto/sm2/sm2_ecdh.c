@@ -241,7 +241,7 @@ ErrP:
     return 0;
 }
 
-int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out, int outlen)
+int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out)
 {
     int ret = 0;
     int self_tmp_prvkey_len = 0;                            //本端临时私钥长度
@@ -295,5 +295,5 @@ int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned 
     memcpy(peer_enc_pubkey, s->session->peer->cert_info->key->public_key->data, 65);
 
     return sm2_compute_key(group, id, 16, self_tmp_prvkey, self_tmp_prvkey_len, self_tmp_pubkey, 65, \
-        self_enc_prvkey, 32, self_enc_pubkey, 65, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, outlen, s->server);
+        self_enc_prvkey, 32, self_enc_pubkey, 65, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, 48, s->server);
 }
