@@ -64,6 +64,7 @@
 #include "ec_lcl.h"
 #include <openssl/ecdsa.h>
 #include <openssl/evp.h>
+#include <openssl/sm2.h>
 #include "evp_locl.h"
 
 /* EC pkey context structure */
@@ -165,7 +166,7 @@ static int pkey_ec_sign(EVP_PKEY_CTX *ctx, unsigned char *sig, size_t *siglen,
     EC_KEY *ec = ctx->pkey->pkey.ec;
 
     if(ec->group->curve_name == NID_sm2p256v1)
-        return SM2_sign(NID_sm3, tbs, tbslen, sig, siglen, ec);
+        return SM2_sign(NID_sm3, tbs, (int)tbslen, sig, (int*)siglen, ec);
 
     if (!sig) {
         *siglen = ECDSA_size(ec);
@@ -197,7 +198,7 @@ static int pkey_ec_verify(EVP_PKEY_CTX *ctx,
     EC_KEY *ec = ctx->pkey->pkey.ec;
 
     if(ec->group->curve_name == NID_sm2p256v1)
-        return SM2_verify(NID_sm3, tbs, tbslen, sig, siglen, ec);
+        return SM2_verify(NID_sm3, tbs, (int)tbslen, sig, (int)siglen, ec);
 
     if (dctx->md)
         type = EVP_MD_type(dctx->md);
@@ -390,7 +391,8 @@ static int pkey_ec_ctrl(EVP_PKEY_CTX *ctx, int type, int p1, void *p2)
             EVP_MD_type((const EVP_MD *)p2) != NID_sha224 &&
             EVP_MD_type((const EVP_MD *)p2) != NID_sha256 &&
             EVP_MD_type((const EVP_MD *)p2) != NID_sha384 &&
-            EVP_MD_type((const EVP_MD *)p2) != NID_sha512) {
+            EVP_MD_type((const EVP_MD *)p2) != NID_sha512 &&
+            EVP_MD_type((const EVP_MD *)p2) != NID_sm3) {
             ECerr(EC_F_PKEY_EC_CTRL, EC_R_INVALID_DIGEST_TYPE);
             return 0;
         }

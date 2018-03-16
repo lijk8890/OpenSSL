@@ -108,8 +108,13 @@ static int do_sigver_init(EVP_MD_CTX *ctx, EVP_PKEY_CTX **pctx,
         *pctx = ctx->pctx;
     if (ctx->pctx->pmeth->flags & EVP_PKEY_FLAG_SIGCTX_CUSTOM)
         return 1;
+#if 0
     if (!EVP_DigestInit_ex(ctx, type, e))
         return 0;
+#else
+    if (!EVP_DigestInit_ext(ctx, type, e, pkey))    //ljk
+        return 0;
+#endif
     return 1;
 }
 
