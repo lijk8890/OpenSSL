@@ -58,6 +58,7 @@ void sms4_ecb_encrypt(const unsigned char *in, unsigned char *out,
 {
 	if (enc)
 		sms4_encrypt(in, out, key);
-	else	sms4_decrypt(in, out, key);
+	else
+		sms4_decrypt(in, out, key);
 }
 

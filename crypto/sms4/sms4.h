@@ -52,8 +52,8 @@
 #ifndef HEADER_SMS4_H
 #define HEADER_SMS4_H
 
-#define SMS4_ENCRYPT        1
-#define SMS4_DECRYPT        0
+#define SMS4_ENCRYPT		1
+#define SMS4_DECRYPT		0
 
 #define SMS4_KEY_LENGTH		16
 #define SMS4_BLOCK_SIZE		16

@@ -116,6 +116,8 @@ extern uint32_t SBOX32H[256 * 256];
 	ROUND(x0, x1, x2, x3, x4, 30);		\
 	ROUND(x1, x2, x3, x4, x0, 31)
 
+void sms4_init_sbox32(void);
+
 #ifdef __cplusplus
 }
 #endif

@@ -18,8 +18,8 @@ APPS=
 
 LIB=$(TOP)/libcrypto.a
 
-LIBSRC=	sms4_cbc.c sms4_ecb.c sms4_setkey.c sms4_enc.c
-LIBOBJ=	sms4_cbc.o sms4_ecb.o sms4_setkey.o sms4_enc.o
+LIBSRC=	sms4_cbc.c sms4_ecb.c sms4_common.c sms4_setkey.c sms4_enc.c
+LIBOBJ=	sms4_cbc.o sms4_ecb.o sms4_common.o sms4_setkey.o sms4_enc.o
 
 SRC= $(LIBSRC)
 

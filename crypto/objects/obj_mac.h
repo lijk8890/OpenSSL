@@ -4192,3 +4192,78 @@
 #define LN_jurisdictionCountryName              "jurisdictionCountryName"
 #define NID_jurisdictionCountryName             957
 #define OBJ_jurisdictionCountryName             1L,3L,6L,1L,4L,1L,311L,60L,2L,1L,3L
+
+#define SN_sm           "SM"
+#define LN_sm           "sm"
+#define NID_sm          958
+#define OBJ_sm          1L,2L,156L,10197L
+
+#define SN_sms4         "SMS4"
+#define LN_sms4         "sms4"
+#define NID_sms4                959
+#define OBJ_sms4                OBJ_sm,1L,104L
+
+#define SN_sms4_ecb             "SMS4-ECB"
+#define LN_sms4_ecb             "sms4-ecb"
+#define NID_sms4_ecb            960
+#define OBJ_sms4_ecb            OBJ_sm,1L,104L,1L
+
+#define SN_sms4_cbc             "SMS4-CBC"
+#define LN_sms4_cbc             "sms4-cbc"
+#define NID_sms4_cbc            961
+#define OBJ_sms4_cbc            OBJ_sm,1L,104L,2L
+
+#define SN_sm2p256v1            "sm2p256v1"
+#define LN_sm2p256v1            "sm2p256v1"
+#define NID_sm2p256v1           962
+#define OBJ_sm2p256v1           OBJ_sm,1L,301L
+
+#define SN_sm2sign              "SM2Sign"
+#define LN_sm2sign              "sm2sign"
+#define NID_sm2sign             963
+#define OBJ_sm2sign             OBJ_sm,1L,301L,1L
+
+#define SN_sm2encrypt           "SM2Encrypt"
+#define LN_sm2encrypt           "sm2encrypt"
+#define NID_sm2encrypt          964
+#define OBJ_sm2encrypt          OBJ_sm,1L,301L,3L
+
+#define SN_sm3          "SM3"
+#define LN_sm3          "sm3"
+#define NID_sm3         965
+#define OBJ_sm3         OBJ_sm,1L,401L
+
+#define SN_hmac_sm3             "HMAC-SM3"
+#define LN_hmac_sm3             "hmac-sm3"
+#define NID_hmac_sm3            966
+#define OBJ_hmac_sm3            OBJ_sm,1L,401L,2L
+
+#define SN_sm3withsm2           "SM3WithSM2"
+#define LN_sm3withsm2           "sm3withsm2"
+#define NID_sm3withsm2          967
+#define OBJ_sm3withsm2          OBJ_sm,1L,501L
+
+#define SN_sm3withrsa           "SM3WithRSA"
+#define LN_sm3withrsa           "sm3withrsa"
+#define NID_sm3withrsa          968
+#define OBJ_sm3withrsa          OBJ_sm,1L,504L
+
+#define SN_pkcs7_data_sm2               "pkcs7-data-sm2"
+#define LN_pkcs7_data_sm2               "pkcs7-data-sm2"
+#define NID_pkcs7_data_sm2              969
+#define OBJ_pkcs7_data_sm2              OBJ_sm,6L,1L,4L,2L,1L
+
+#define SN_pkcs7_signedData_sm2         "pkcs7-signedData-sm2"
+#define LN_pkcs7_signedData_sm2         "pkcs7-signedData-sm2"
+#define NID_pkcs7_signedData_sm2                970
+#define OBJ_pkcs7_signedData_sm2                OBJ_sm,6L,1L,4L,2L,2L
+
+#define SN_pkcs7_envelopedData_sm2              "pkcs7-envelopedData-sm2"
+#define LN_pkcs7_envelopedData_sm2              "pkcs7-envelopedData-sm2"
+#define NID_pkcs7_envelopedData_sm2             971
+#define OBJ_pkcs7_envelopedData_sm2             OBJ_sm,6L,1L,4L,2L,3L
+
+#define SN_pkcs7_signedAndEnvelopedData_sm2             "pkcs7-signedAndEnvelopedData-sm2"
+#define LN_pkcs7_signedAndEnvelopedData_sm2             "pkcs7-signedAndEnvelopedData-sm2"
+#define NID_pkcs7_signedAndEnvelopedData_sm2            972
+#define OBJ_pkcs7_signedAndEnvelopedData_sm2            OBJ_sm,6L,1L,4L,2L,4L
