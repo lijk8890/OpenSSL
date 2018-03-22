@@ -89,7 +89,7 @@ void print_bn(BIGNUM *bn)
 {
     int loop = 0;
     int length = 0;
-    unsigned char buffer[256] = {0};
+    unsigned char buffer[128] = {0};
     length = BN_bn2bin(bn, buffer);
     for(loop = 0; loop < length; loop++)
         fprintf(stdout, "0x%02hhx%c", buffer[loop], (loop + 1) % 16 == 0 ? '\n' : ' ');
@@ -101,7 +101,7 @@ void print_point(const EC_GROUP *group, EC_POINT *point)
     int loop = 0;
     int length = 0;
     unsigned char buffer[256+1] = {0};
-    EC_POINT_point2oct(group, point, POINT_CONVERSION_UNCOMPRESSED, buffer, 256+1, NULL);
+    length = EC_POINT_point2oct(group, point, POINT_CONVERSION_UNCOMPRESSED, buffer, 256+1, NULL);
     for(loop = 1; loop < length; loop++)
         fprintf(stdout, "0x%02hhx%c", buffer[loop], (loop + 1) % 16 == 0 ? '\n' : ' ');
     fprintf(stdout, "\n");

@@ -1687,6 +1687,7 @@ struct ssl_st {
     unsigned char *alpn_client_proto_list;
     unsigned alpn_client_proto_list_len;
 #  endif                        /* OPENSSL_NO_TLSEXT */
+    unsigned char handshakeType;
 };
 
 # endif

@@ -8,14 +8,6 @@
 extern "C" {
 #endif
 
-int get_z(const char *id, int id_len, unsigned char *pubkey, int pubkey_len, unsigned char md[SM3_DIGEST_LENGTH]);
-
-int kdf_sm3(unsigned char *in, int inlen, unsigned char *out, int outlen);
-
-void print_bn(BIGNUM *bn);
-
-void print_point(const EC_GROUP *group, EC_POINT *point);
-
 int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec);
 
 int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec);
@@ -37,6 +29,14 @@ int sm2_compute_key(                                                    \
     );
 
 int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out);
+
+int get_z(const char *id, int id_len, unsigned char *pubkey, int pubkey_len, unsigned char md[SM3_DIGEST_LENGTH]);
+    
+int kdf_sm3(unsigned char *in, int inlen, unsigned char *out, int outlen);
+    
+void print_bn(BIGNUM *bn);
+    
+void print_point(const EC_GROUP *group, EC_POINT *point);
 
 #ifdef __cplusplus
 }
