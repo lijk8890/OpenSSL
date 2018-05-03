@@ -73,7 +73,7 @@ static Ipp32u sm2h[] = {
     0x00000001
 };
 
-// 2^w = 2^127
+// power 2^w = 2^127
 static Ipp32u sm2pow[] = {
     0x00000000, 0x00000000, 0x00000000, 0x80000000
 };
@@ -259,7 +259,7 @@ int ipp_sm2_sign(unsigned char *dgst, int dgstlen, unsigned char *sig, int *sigl
     status = ippsECCPSignSM2(digest, prvKey, k, sigr, sigs, eccp);
     if(status != ippStsNoErr)
     {
-        fprintf(stderr, "%s %s:%d - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
+        fprintf(stderr, "%s %s:%u - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
         goto ErrP;
     }
 
@@ -337,8 +337,8 @@ int ipp_sm2_verify(unsigned char *dgst, int dgstlen, unsigned char *sig, int sig
     status = ippsECCPVerifySM2(digest, pubKey, sigr, sigs, &result, eccp);
     if(status != ippStsNoErr || result != ippECValid)
     {
-        fprintf(stderr, "%s %s:%d - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
-        fprintf(stderr, "%s %s:%d - %s\n", __FUNCTION__, __FILE__, __LINE__, ippsECCGetResultString(result));
+        fprintf(stderr, "%s %s:%u - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
+        fprintf(stderr, "%s %s:%u - %s\n", __FUNCTION__, __FILE__, __LINE__, ippsECCGetResultString(result));
         goto ErrP;
     }
 
@@ -653,7 +653,7 @@ int ipp_sm2_compute_key(                                                \
     status = ippsMontMul(x1bar, self_tmp_bn, mn, t);
     if(status != ippStsNoErr)
     {
-        fprintf(stderr, "%s %s:%d - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
+        fprintf(stderr, "%s %s:%u - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
         goto ErrP;
     }
     ippsAdd_BN(self_enc_bn, t, t);
@@ -668,8 +668,8 @@ int ipp_sm2_compute_key(                                                \
     status = ippsECCPCheckPoint(point, &result, eccp);
     if(status != ippStsNoErr || result != ippECValid)
     {
-        fprintf(stderr, "%s %s:%d - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
-        fprintf(stderr, "%s %s:%d - %s\n", __FUNCTION__, __FILE__, __LINE__, ippsECCGetResultString(result));
+        fprintf(stderr, "%s %s:%u - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
+        fprintf(stderr, "%s %s:%u - %s\n", __FUNCTION__, __FILE__, __LINE__, ippsECCGetResultString(result));
         goto ErrP;
     }
     ippsECCPGetPoint(x, y, point, eccp);
