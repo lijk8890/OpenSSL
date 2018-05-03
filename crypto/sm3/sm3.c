@@ -68,6 +68,7 @@ int sm3_init(sm3_ctx_t *ctx)
 
 	ctx->nblocks = 0;
 	ctx->num = 0;
+	return 1;
 }
 
 int sm3_update(sm3_ctx_t *ctx, const unsigned char* data, size_t data_len)

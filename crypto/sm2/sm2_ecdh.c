@@ -21,12 +21,12 @@ int sm2_compute_key(                                                    \
     BIGNUM *x2bar = BN_new();
     BIGNUM *t = BN_new();
     BIGNUM *h = BN_new();
-    BIGNUM *self_tmp_bn = BN_new();                         //æœ¬ç«¯ä¸´æ—¶ç§é’¥ rA or rB
-    BIGNUM *self_enc_bn = BN_new();                         //æœ¬ç«¯åŠ å¯†è¯ä¹¦ç§é’¥ dA or dB
-    EC_POINT *self_tmp_point = EC_POINT_new(group);         //æœ¬ç«¯ä¸´æ—¶å…¬é’¥ RA or RB - x1bar
-    EC_POINT *peer_tmp_point = EC_POINT_new(group);         //å¯¹ç«¯ä¸´æ—¶å…¬é’¥ RB or RA - x2bar
-    EC_POINT *peer_enc_point = EC_POINT_new(group);         //å¯¹ç«¯åŠ å¯†è¯ä¹¦å…¬é’¥ PB or PA
-    EC_POINT *point = EC_POINT_new(group);                  //ç›®æ ‡æ¤­åœ†æ›²çº¿ç‚¹ U or V
+    BIGNUM *self_tmp_bn = BN_new();                         //±¾¶ËÁÙÊ±Ë½Ô¿ rA or rB
+    BIGNUM *self_enc_bn = BN_new();                         //±¾¶Ë¼ÓÃÜÖ¤ÊéË½Ô¿ dA or dB
+    EC_POINT *self_tmp_point = EC_POINT_new(group);         //±¾¶ËÁÙÊ±¹«Ô¿ RA or RB - x1bar
+    EC_POINT *peer_tmp_point = EC_POINT_new(group);         //¶Ô¶ËÁÙÊ±¹«Ô¿ RB or RA - x2bar
+    EC_POINT *peer_enc_point = EC_POINT_new(group);         //¶Ô¶Ë¼ÓÃÜÖ¤Êé¹«Ô¿ PB or PA
+    EC_POINT *point = EC_POINT_new(group);                  //Ä¿±êÍÖÔ²ÇúÏßµã U or V
     unsigned char pxyzab[128+1] = {0};
 
     if(bn_ctx == NULL || order == NULL || two_pow_w == NULL || x1bar == NULL || x2bar == NULL || t == NULL || h == NULL \
@@ -88,7 +88,7 @@ int sm2_compute_key(                                                    \
      * t = (d + x * r) mod n
      * t = (h * t) mod n
      */
-    w = (BN_num_bits(order) + 1) / 2 - 1;                   //å‘ä¸Šå–æ•´ w = 127
+    w = (BN_num_bits(order) + 1) / 2 - 1;                   //ÏòÉÏÈ¡Õû w = 127
     if(!BN_lshift(two_pow_w, BN_value_one(), w))            //two_pow_w = 2^w
     {
         fprintf(stderr, "%s %s:%u - BN_lshift failed\n", __FUNCTION__, __FILE__, __LINE__);
@@ -244,16 +244,16 @@ ErrP:
 int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out)
 {
     int ret = 0;
-    int self_tmp_prvkey_len = 0;                            //æœ¬ç«¯ä¸´æ—¶ç§é’¥é•¿åº¦
+    int self_tmp_prvkey_len = 0;                            //±¾¶ËÁÙÊ±Ë½Ô¿³¤¶È
 
-    unsigned char self_tmp_prvkey[32] = {0};                //æœ¬ç«¯ä¸´æ—¶ç§é’¥
-    unsigned char self_tmp_pubkey[65] = {0};                //æœ¬ç«¯ä¸´æ—¶å…¬é’¥
+    unsigned char self_tmp_prvkey[32] = {0};                //±¾¶ËÁÙÊ±Ë½Ô¿
+    unsigned char self_tmp_pubkey[65] = {0};                //±¾¶ËÁÙÊ±¹«Ô¿
 
-    unsigned char self_enc_prvkey[32] = {0};                //æœ¬ç«¯åŠ å¯†è¯ä¹¦ç§é’¥
-    unsigned char self_enc_pubkey[65] = {0};                //æœ¬ç«¯åŠ å¯†è¯ä¹¦å…¬é’¥
+    unsigned char self_enc_prvkey[32] = {0};                //±¾¶Ë¼ÓÃÜÖ¤ÊéË½Ô¿
+    unsigned char self_enc_pubkey[65] = {0};                //±¾¶Ë¼ÓÃÜÖ¤Êé¹«Ô¿
 
-    unsigned char peer_tmp_pubkey[65] = {0};                //å¯¹ç«¯ä¸´æ—¶å…¬é’¥
-    unsigned char peer_enc_pubkey[65] = {0};                //å¯¹ç«¯åŠ å¯†è¯ä¹¦å…¬é’¥
+    unsigned char peer_tmp_pubkey[65] = {0};                //¶Ô¶ËÁÙÊ±¹«Ô¿
+    unsigned char peer_enc_pubkey[65] = {0};                //¶Ô¶Ë¼ÓÃÜÖ¤Êé¹«Ô¿
 
     const char *id = "1234567812345678";
     const EC_GROUP *group = EC_KEY_get0_group(ecdh);

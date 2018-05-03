@@ -18,12 +18,12 @@ APPS=
 
 LIB=$(TOP)/libcrypto.a
 
-LIBSRC=	sm3.c
-LIBOBJ=	sm3.o
+LIBSRC=	sm3.c sm3_ipp.c
+LIBOBJ=	sm3.o sm3_ipp.o
 
 SRC= $(LIBSRC)
 
-EXHEADER= sm3.h
+EXHEADER= sm3.h sm3_ipp.h
 HEADER=	byteorder.h $(EXHEADER)
 
 ALL=    $(GENERAL) $(SRC) $(HEADER)

@@ -178,7 +178,7 @@ static int pkey_ec_sign(EVP_PKEY_CTX *ctx, unsigned char *sig, size_t *siglen,
     else
         type = NID_sha1;
 
-    if(type == NID_sm3 || ec->group->curve_name == NID_sm2p256v1)
+    if(ec->group->curve_name == NID_sm2p256v1)
         return SM2_sign(NID_sm3, tbs, (int)tbslen, sig, (int*)siglen, ec);
 
     ret = ECDSA_sign(type, tbs, tbslen, sig, &sltmp, ec);
@@ -202,7 +202,7 @@ static int pkey_ec_verify(EVP_PKEY_CTX *ctx,
     else
         type = NID_sha1;
 
-    if(type == NID_sm3 || ec->group->curve_name == NID_sm2p256v1)
+    if(ec->group->curve_name == NID_sm2p256v1)
         return SM2_verify(NID_sm3, tbs, (int)tbslen, sig, (int)siglen, ec);
 
     ret = ECDSA_verify(type, tbs, tbslen, sig, siglen, ec);

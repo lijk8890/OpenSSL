@@ -8,6 +8,14 @@
 extern "C" {
 #endif
 
+typedef struct SM2Cipher_st {
+    ASN1_INTEGER *xCoordinate;          // x分量
+    ASN1_INTEGER *yCoordinate;          // y分量
+    ASN1_OCTET_STRING *hash;            // 杂凑值
+    ASN1_OCTET_STRING *cipherText;      // 密文
+} SM2Cipher;
+DECLARE_ASN1_FUNCTIONS(SM2Cipher);
+
 int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec);
 
 int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec);
@@ -30,13 +38,19 @@ int sm2_compute_key(                                                    \
 
 int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out);
 
-int get_z(const char *id, int id_len, unsigned char *pubkey, int pubkey_len, unsigned char md[SM3_DIGEST_LENGTH]);
-    
 int kdf_sm3(unsigned char *in, int inlen, unsigned char *out, int outlen);
-    
+
+int get_z(const char *id, int id_len, unsigned char *pubkey, int pubkey_len, unsigned char md[SM3_DIGEST_LENGTH]);
+
 void print_bn(BIGNUM *bn);
-    
+
 void print_point(const EC_GROUP *group, EC_POINT *point);
+
+// unsigned char prvkey[32];
+int get_prvkey_from_ec_key(EC_KEY *ec_key, unsigned char *out);
+
+// unsigned char pubkey[64+1];
+int get_pubkey_from_ec_key(EC_KEY *ec_key, unsigned char *out, int len);
 
 #ifdef __cplusplus
 }

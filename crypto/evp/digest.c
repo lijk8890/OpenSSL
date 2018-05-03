@@ -355,7 +355,7 @@ int EVP_DigestInit_ext(EVP_MD_CTX *ctx, const EVP_MD *type, ENGINE *impl, EVP_PK
         return 0;
     }
 #endif
-    if(type->type == NID_sm3)
+    if(ctx->digest->type == NID_sm3)
     {
         unsigned char md[32] = {0};
         unsigned char pubkey[65] = {0};

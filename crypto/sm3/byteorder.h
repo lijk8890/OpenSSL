@@ -1,7 +1,6 @@
 #ifndef HEADER_BYTEORDER_H
 #define HEADER_BYTEORDER_H
 
-
 #if __BYTE_ORDER == __BIG_ENDIAN
 
 #define cpu_to_be16(v) (v)

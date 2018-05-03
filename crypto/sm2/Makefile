@@ -18,12 +18,12 @@ APPS=
 
 LIB=$(TOP)/libcrypto.a
 
-LIBSRC=	sm2_sign.c sm2_enc.c sm2_ecdh.c sm2_lib.c
-LIBOBJ=	sm2_sign.o sm2_enc.o sm2_ecdh.o sm2_lib.o
+LIBSRC=	sm2_sign.c sm2_enc.c sm2_ecdh.c sm2_lib.c sm2_ipp.c
+LIBOBJ=	sm2_sign.o sm2_enc.o sm2_ecdh.o sm2_lib.o sm2_ipp.o
 
 SRC= $(LIBSRC)
 
-EXHEADER= sm2.h
+EXHEADER= sm2.h sm2_ipp.h
 HEADER=	$(EXHEADER)
 
 ALL=    $(GENERAL) $(SRC) $(HEADER)

@@ -309,6 +309,8 @@ SSL *SSL_new(SSL_CTX *ctx)
         goto err;
     memset(s, 0, sizeof(SSL));
 
+    s->handshakeType = ctx->handshakeType;
+
 #ifndef OPENSSL_NO_KRB5
     s->kssl_ctx = kssl_ctx_new();
 #endif                          /* OPENSSL_NO_KRB5 */
@@ -900,6 +902,23 @@ X509 *SSL_get_peer_certificate(const SSL *s)
     return (r);
 }
 
+X509 *SSL_get_peer_certificate_ext(const SSL *s)
+{
+    X509 *r;
+
+    if ((s == NULL) || (s->session == NULL))
+        r = NULL;
+    else
+        r = s->session->peer_ext;
+
+    if (r == NULL)
+        return (r);
+
+    CRYPTO_add(&r->references, 1, CRYPTO_LOCK_X509);
+
+    return (r);
+}
+
 STACK_OF(X509) *SSL_get_peer_cert_chain(const SSL *s)
 {
     STACK_OF(X509) *r;
@@ -965,6 +984,23 @@ int SSL_CTX_check_private_key(const SSL_CTX *ctx)
     }
     return (X509_check_private_key
             (ctx->cert->key->x509, ctx->cert->key->privatekey));
+}
+
+int SSL_CTX_check_private_key_ext(const SSL_CTX *ctx)
+{
+    if ((ctx == NULL) ||
+        (ctx->cert == NULL) || (ctx->cert->key->x509 == NULL)) {
+        SSLerr(SSL_F_SSL_CTX_CHECK_PRIVATE_KEY,
+               SSL_R_NO_CERTIFICATE_ASSIGNED);
+        return (0);
+    }
+    if (ctx->cert->key->privatekey == NULL) {
+        SSLerr(SSL_F_SSL_CTX_CHECK_PRIVATE_KEY,
+               SSL_R_NO_PRIVATE_KEY_ASSIGNED);
+        return (0);
+    }
+    return (X509_check_private_key(ctx->cert->pkeys[SSL_PKEY_ECC_ENC].x509, ctx->cert->pkeys[SSL_PKEY_ECC_ENC].privatekey) && 
+            X509_check_private_key(ctx->cert->pkeys[SSL_PKEY_ECC_SGN].x509, ctx->cert->pkeys[SSL_PKEY_ECC_SGN].privatekey));
 }
 
 /* Fix this function so that it takes an optional type parameter */
@@ -2085,6 +2121,11 @@ SSL_CTX *SSL_CTX_new(const SSL_METHOD *meth)
     return (NULL);
 }
 
+void SSL_CTX_set_handshake_type_ext(SSL_CTX *ctx, unsigned char handshakeType)
+{
+    ctx->handshakeType = handshakeType;
+}
+
 #if 0
 static void SSL_COMP_free(SSL_COMP *comp)
 {
@@ -2800,6 +2841,7 @@ int SSL_do_handshake(SSL *s)
  */
 void SSL_set_accept_state(SSL *s)
 {
+    s->handshakeType = SSL_HANDSHAKE_RSA;
     s->server = 1;
     s->shutdown = 0;
     s->state = SSL_ST_ACCEPT | SSL_ST_BEFORE;

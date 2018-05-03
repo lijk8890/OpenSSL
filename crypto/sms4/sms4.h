@@ -64,7 +64,6 @@
 #include <stdint.h>
 #include <string.h>
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -76,7 +75,7 @@ typedef struct {
 void sms4_set_encrypt_key(sms4_key_t *key, const unsigned char *user_key);
 void sms4_set_decrypt_key(sms4_key_t *key, const unsigned char *user_key);
 void sms4_encrypt(const unsigned char *in, unsigned char *out, const sms4_key_t *key);
-#define sms4_decrypt(in,out,key)  sms4_encrypt(in,out,key)
+#define sms4_decrypt(in,out,key) sms4_encrypt(in,out,key)
 
 void sms4_ecb_encrypt(const unsigned char *in, unsigned char *out,
 	const sms4_key_t *key, int enc);

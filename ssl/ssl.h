@@ -535,9 +535,8 @@ struct ssl_session_st {
      * not retained in the external representation of sessions, see
      * ssl_asn1.c).
      */
-    X509 *peer;
-//  X509 *peer_enc;
-    X509 *peer_sgn;
+    X509 *peer;         // for enc
+    X509 *peer_ext;     // for sgn
     /*
      * when app_verify_callback accepts a session where the peer's
      * certificate is not ok, we must remember the error for session reuse:
@@ -1183,6 +1182,7 @@ struct ssl_ctx_st {
     unsigned char *tlsext_ellipticcurvelist;
 #   endif                       /* OPENSSL_NO_EC */
 #  endif
+    unsigned char handshakeType;
 };
 
 # endif
@@ -2132,6 +2132,7 @@ void BIO_ssl_shutdown(BIO *ssl_bio);
 
 int SSL_CTX_set_cipher_list(SSL_CTX *, const char *str);
 SSL_CTX *SSL_CTX_new(const SSL_METHOD *meth);
+void SSL_CTX_set_handshake_type_ext(SSL_CTX *ctx, unsigned char handshakeType);
 void SSL_CTX_free(SSL_CTX *);
 long SSL_CTX_set_timeout(SSL_CTX *ctx, long t);
 long SSL_CTX_get_timeout(const SSL_CTX *ctx);
@@ -2200,7 +2201,9 @@ int SSL_use_PrivateKey_file(SSL *ssl, const char *file, int type);
 int SSL_use_certificate_file(SSL *ssl, const char *file, int type);
 int SSL_CTX_use_RSAPrivateKey_file(SSL_CTX *ctx, const char *file, int type);
 int SSL_CTX_use_PrivateKey_file(SSL_CTX *ctx, const char *file, int type);
+int SSL_CTX_use_PrivateKey_file_ext(SSL_CTX *ctx, const char *file, const char *file_ext, int type);
 int SSL_CTX_use_certificate_file(SSL_CTX *ctx, const char *file, int type);
+int SSL_CTX_use_certificate_file_ext(SSL_CTX *ctx, const char *file, const char *file_ext, int type);
 /* PEM type */
 int SSL_CTX_use_certificate_chain_file(SSL_CTX *ctx, const char *file);
 STACK_OF(X509_NAME) *SSL_load_client_CA_file(const char *file);
@@ -2254,6 +2257,7 @@ SSL_SESSION *d2i_SSL_SESSION(SSL_SESSION **a, const unsigned char **pp,
 
 # ifdef HEADER_X509_H
 X509 *SSL_get_peer_certificate(const SSL *s);
+X509 *SSL_get_peer_certificate_ext(const SSL *s);
 # endif
 
 STACK_OF(X509) *SSL_get_peer_cert_chain(const SSL *s);
@@ -2276,9 +2280,11 @@ int SSL_CTX_use_RSAPrivateKey(SSL_CTX *ctx, RSA *rsa);
 int SSL_CTX_use_RSAPrivateKey_ASN1(SSL_CTX *ctx, const unsigned char *d,
                                    long len);
 int SSL_CTX_use_PrivateKey(SSL_CTX *ctx, EVP_PKEY *pkey);
+int SSL_CTX_use_PrivateKey_ext(SSL_CTX *ctx, EVP_PKEY *pkey, EVP_PKEY *pkey_ext);
 int SSL_CTX_use_PrivateKey_ASN1(int pk, SSL_CTX *ctx,
                                 const unsigned char *d, long len);
 int SSL_CTX_use_certificate(SSL_CTX *ctx, X509 *x);
+int SSL_CTX_use_certificate_ext(SSL_CTX *ctx, X509 *x, X509 *x_ext);
 int SSL_CTX_use_certificate_ASN1(SSL_CTX *ctx, int len,
                                  const unsigned char *d);
 
@@ -2286,6 +2292,7 @@ void SSL_CTX_set_default_passwd_cb(SSL_CTX *ctx, pem_password_cb *cb);
 void SSL_CTX_set_default_passwd_cb_userdata(SSL_CTX *ctx, void *u);
 
 int SSL_CTX_check_private_key(const SSL_CTX *ctx);
+int SSL_CTX_check_private_key_ext(const SSL_CTX *ctx);
 int SSL_check_private_key(const SSL *ctx);
 
 int SSL_CTX_set_session_id_context(SSL_CTX *ctx, const unsigned char *sid_ctx,

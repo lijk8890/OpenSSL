@@ -28,7 +28,7 @@ static const EVP_MD sm3_md = {
     NULL,
     NULL,
     (evp_sign_method*)SM2_sign,
-    (evp_sign_method*)SM2_verify,
+    (evp_verify_method*)SM2_verify,
     {EVP_PKEY_EC, 0, 0, 0},
     SM3_BLOCK_SIZE,
     sizeof(EVP_MD*) + sizeof(sm3_ctx_t),

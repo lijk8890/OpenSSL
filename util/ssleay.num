@@ -368,3 +368,10 @@ SSL_CTX_use_serverinfo_file             406	EXIST::FUNCTION:STDIO,TLSEXT
 SSL_COMP_free_compression_methods       407	EXIST:!VMS:FUNCTION:
 SSL_COMP_free_compress_methods          407	EXIST:VMS:FUNCTION:
 SSL_extension_supported                 409	EXIST::FUNCTION:TLSEXT
+SSL_get_peer_certificate_ext            410	EXIST::FUNCTION:
+SSL_CTX_check_private_key_ext           411	EXIST::FUNCTION:
+SSL_CTX_set_handshake_type_ext          412	EXIST::FUNCTION:
+SSL_CTX_use_PrivateKey_file_ext         413	EXIST::FUNCTION:STDIO
+SSL_CTX_use_PrivateKey_ext              414	EXIST::FUNCTION:
+SSL_CTX_use_certificate_file_ext        415	EXIST::FUNCTION:STDIO
+SSL_CTX_use_certificate_ext             416	EXIST::FUNCTION:

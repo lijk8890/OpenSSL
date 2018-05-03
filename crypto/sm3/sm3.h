@@ -63,7 +63,6 @@
 extern "C" {
 #endif
 
-
 typedef struct {
 	uint32_t digest[8];
 	int nblocks;
