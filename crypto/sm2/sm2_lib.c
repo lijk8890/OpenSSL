@@ -1,11 +1,11 @@
 #include "sm2.h"
 
-#if __BYTE_ORDER == __BIG_ENDIAN
-#define cpu_to_be16(v) (v)
-#define cpu_to_be32(v) (v)
-#else
+#if __BYTE_ORDER == __LITTLE_ENDIAN
 #define cpu_to_be16(v) ((v << 8) | (v >> 8))
 #define cpu_to_be32(v) ((cpu_to_be16(v) << 16) | cpu_to_be16(v >> 16))
+#else
+#define cpu_to_be16(v) (v)
+#define cpu_to_be32(v) (v)
 #endif
 
 // a

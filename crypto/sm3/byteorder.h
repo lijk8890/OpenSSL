@@ -1,15 +1,7 @@
 #ifndef HEADER_BYTEORDER_H
 #define HEADER_BYTEORDER_H
 
-#if __BYTE_ORDER == __BIG_ENDIAN
-
-#define cpu_to_be16(v) (v)
-#define cpu_to_be32(v) (v)
-#define be16_to_cpu(v) (v)
-#define be32_to_cpu(v) (v)
-
-#else
-
+#if __BYTE_ORDER == __LITTLE_ENDIAN
 #define cpu_to_le16(v) (v)
 #define cpu_to_le32(v) (v)
 #define le16_to_cpu(v) (v)
@@ -19,7 +11,11 @@
 #define cpu_to_be32(v) (((v)>>24) | (((v)>>8)&0xff00) | (((v)<<8)&0xff0000) | ((v)<<24))
 #define be16_to_cpu(v) cpu_to_be16(v)
 #define be32_to_cpu(v) cpu_to_be32(v)
-
+#else
+#define cpu_to_be16(v) (v)
+#define cpu_to_be32(v) (v)
+#define be16_to_cpu(v) (v)
+#define be32_to_cpu(v) (v)
 #endif
 
 #endif
