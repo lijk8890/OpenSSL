@@ -410,7 +410,7 @@ Makefile: Makefile.org Configure config
 	@false
 
 libclean:
-	rm -f *.map *.so *.so.* *.dylib *.dll engines/*.so engines/*.dll engines/*.dylib *.a engines/*.a  [^\<ipp\>]*/lib */*/lib
+	rm -f *.map *.so *.so.* *.dylib *.dll engines/*.so engines/*.dll engines/*.dylib *.a engines/*.a [^\<ipp\>]*/lib */*/lib
 
 clean:	libclean
 	rm -f shlib/*.o *.o core a.out fluff rehash.time testlog make.log cctest cctest.c
