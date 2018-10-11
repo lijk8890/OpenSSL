@@ -235,6 +235,52 @@ void ipp_print_point(IppsECCPPointState *point, IppsECCPState *eccp)
     if(y) free(y);
 }
 
+int ipp_sm2_keypair(unsigned char prvkey[32], unsigned char pubkey[65])
+{
+    IppStatus status;
+    IppsECCPState *ECCP = newSM2_ECCP(SM2_BITS);
+    IppsPRNGState *PRNG = newSM2_PRNG(SM2_INTS);
+    IppsBigNumState *x = newSM2_BN(SM2_INTS, NULL);
+    IppsBigNumState *y = newSM2_BN(SM2_INTS, NULL);
+    IppsBigNumState *k = newSM2_BN(SM2_INTS, NULL);
+    IppsECCPPointState *point = newSM2_Point(SM2_BITS);
+
+    status = ippsECCPGenKeyPair(k, point, ECCP, ippsPRNGen, PRNG);
+    if(status != ippStsNoErr)
+    {
+        fprintf(stderr, "%s:%d - %s\n", __FILE__, __LINE__, ippGetStatusString(status));
+        goto ErrP;
+    }
+    ippsECCPGetPoint(x, y, point, ECCP);
+
+    pubkey[0] = 0x04;
+    ippsGetOctString_BN(&pubkey[1], 32, x);
+    ippsGetOctString_BN(&pubkey[33], 32, y);
+
+    status = ippsGetOctString_BN(&prvkey[0], 32, k);
+    if(status != ippStsNoErr)
+    {
+        fprintf(stderr, "%s:%d - %s\n", __FILE__, __LINE__, ippGetStatusString(status));
+        goto ErrP;
+    }
+
+    if(x) free(x);
+    if(y) free(y);
+    if(k) free(k);
+    if(point) free(point);
+    if(PRNG) free(PRNG);
+    if(ECCP) free(ECCP);
+    return 1;
+ErrP:
+    if(x) free(x);
+    if(y) free(y);
+    if(k) free(k);
+    if(point) free(point);
+    if(PRNG) free(PRNG);
+    if(ECCP) free(ECCP);
+    return 0;
+}
+
 int ipp_sm2_sign(unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, unsigned char *prvkey, int keylen)
 {
     IppStatus status = ippStsNoErr;

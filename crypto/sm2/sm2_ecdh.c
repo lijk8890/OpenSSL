@@ -1,7 +1,8 @@
 #include "sm2.h"
+#include "sm2_ipp.h"
 #include "../../ssl/ssl_locl.h"
 
-int sm2_compute_key(                                                    \
+int openssl_sm2_compute_key(                                            \
     const EC_GROUP *group, const char *id, int id_len,                  \
     unsigned char *self_tmp_prvkey, int self_tmp_prvkey_len,            \
     unsigned char *self_tmp_pubkey, int self_tmp_pubkey_len,            \
@@ -294,6 +295,11 @@ int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned 
     }
     memcpy(peer_enc_pubkey, s->session->peer->cert_info->key->public_key->data, 65);
 
-    return sm2_compute_key(group, id, 16, self_tmp_prvkey, self_tmp_prvkey_len, self_tmp_pubkey, 65, \
+#ifdef OPENSSL_WITH_INTEL
+    return ipp_sm2_compute_key(id, 16, self_tmp_prvkey, self_tmp_prvkey_len, self_tmp_pubkey, 65, \
         self_enc_prvkey, 32, self_enc_pubkey, 65, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, 48, s->server);
+#else
+    return openssl_sm2_compute_key(group, id, 16, self_tmp_prvkey, self_tmp_prvkey_len, self_tmp_pubkey, 65, \
+        self_enc_prvkey, 32, self_enc_pubkey, 65, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, 48, s->server);
+#endif
 }

@@ -123,6 +123,8 @@
 # include "evp_locl.h"
 #endif
 
+#include "../ec/ec_lcl.h"
+
 void EVP_MD_CTX_init(EVP_MD_CTX *ctx)
 {
     memset(ctx, '\0', sizeof *ctx);
@@ -363,6 +365,12 @@ int EVP_DigestInit_ext(EVP_MD_CTX *ctx, const EVP_MD *type, ENGINE *impl, EVP_PK
 
         if(pkey == NULL || pkey->pkey.ec == NULL)   //单向SSL握手
             return ctx->digest->init(ctx);
+
+        if(pkey->type != EVP_PKEY_EC || pkey->pkey.ec->group->curve_name != NID_sm2p256v1)
+        {
+            EVPerr(EVP_F_EVP_DIGESTINIT_EX, EVP_R_INITIALIZATION_ERROR);
+            return 0;
+        }
 
         if(EC_POINT_point2oct(EC_KEY_get0_group(pkey->pkey.ec), EC_KEY_get0_public_key(pkey->pkey.ec), POINT_CONVERSION_UNCOMPRESSED, pubkey, 65, NULL) != 65)
         {

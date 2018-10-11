@@ -84,64 +84,77 @@ int main(int argc, char *argv[])
     }
 
 do{
+#ifdef OPENSSL_WITH_INTEL
+    // 密钥对
+    ret = ipp_sm2_keypair(prvkey, pubkey);
+    if(ret <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - ipp_sm2_keypair failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
+    fprintf(stdout, "%s %s:%u - ipp_sm2_keypair succeed:\n", __FUNCTION__, __FILE__, __LINE__);
+    PRINT_HEX(prvkey, 32);
+    PRINT_HEX(pubkey, 65);
+
     // 客户端
     ret = ipp_sm2_compute_key("1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 0);
     if(ret <= 0)
     {
-        fprintf(stderr, "%s %s:%u - ipp_sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
-    fprintf(stdout, "%s %s:%u - ipp_sm2_compute_key succeed:\n", __FUNCTION__, __FILE__, __LINE__);
+    fprintf(stdout, "%s %s:%u - sm2_compute_key succeed:\n", __FUNCTION__, __FILE__, __LINE__);
     PRINT_HEX(out, ret);
+#endif
 
     // 服务端
-    ret = ipp_sm2_compute_key("1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 1);
+    ret = openssl_sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 1);
     if(ret <= 0)
     {
-        fprintf(stderr, "%s %s:%u - ipp_sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
-    fprintf(stdout, "%s %s:%u - ipp_sm2_compute_key succeed:\n", __FUNCTION__, __FILE__, __LINE__);
+    fprintf(stdout, "%s %s:%u - sm2_compute_key succeed:\n", __FUNCTION__, __FILE__, __LINE__);
     PRINT_HEX(out, ret);
 
     // 加密
-    outlen = ipp_sm2_encrypt(in, 10, out, pubkey, 65);
+    outlen = SM2_encrypt(NID_sm3, in, 10, out, ec);
     if(outlen <= 0)
     {
-        fprintf(stderr, "%s %s:%u - ipp_sm2_encrypt failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - SM2_encrypt failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
-    fprintf(stdout, "%s %s:%u - ipp_sm2_encrypt succeed:\n", __FUNCTION__, __FILE__, __LINE__);
+    fprintf(stdout, "%s %s:%u - SM2_encrypt succeed:\n", __FUNCTION__, __FILE__, __LINE__);
     PRINT_HEX(out, outlen);
 
     // 解密
-    inlen = ipp_sm2_decrypt(out, outlen, in, prvkey, 32);
+    inlen = SM2_decrypt(NID_sm3, out, outlen, in, ec);
     if(inlen <= 0)
     {
-        fprintf(stderr, "%s %s:%u - ipp_sm2_decrypt failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - SM2_decrypt failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
-    fprintf(stdout, "%s %s:%u - ipp_sm2_decrypt succeed:\n", __FUNCTION__, __FILE__, __LINE__);
+    fprintf(stdout, "%s %s:%u - SM2_decrypt succeed:\n", __FUNCTION__, __FILE__, __LINE__);
     PRINT_HEX(in, inlen);
 
     // 签名
-    ret = ipp_sm2_sign(md, 32, out, &outlen, prvkey, 32);
+    ret = SM2_sign(NID_sm3, md, 32, out, &outlen, ec);
     if(ret <= 0)
     {
-        fprintf(stderr, "%s %s:%u - ipp_sm2_sign failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - SM2_sign failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
-    fprintf(stdout, "%s %s:%u - ipp_sm2_sign succeed:\n", __FUNCTION__, __FILE__, __LINE__);
+    fprintf(stdout, "%s %s:%u - SM2_sign succeed:\n", __FUNCTION__, __FILE__, __LINE__);
     PRINT_HEX(out, outlen);
 
     // 验签
-    ret = ipp_sm2_verify(md, 32, out, outlen, pubkey, 65);
+    ret = SM2_verify(NID_sm3, md, 32, out, outlen, ec);
     if(ret <= 0)
     {
-        fprintf(stderr, "%s %s:%u - ipp_sm2_verify failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - SM2_verify failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
-    fprintf(stdout, "%s %s:%u - ipp_sm2_verify succeed:\n", __FUNCTION__, __FILE__, __LINE__);
+    fprintf(stdout, "%s %s:%u - SM2_verify succeed:\n", __FUNCTION__, __FILE__, __LINE__);
     PRINT_HEX(md, 32);
 
     usleep(100);

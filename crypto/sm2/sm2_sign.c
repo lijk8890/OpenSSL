@@ -1,8 +1,11 @@
+#include <errno.h>
+#include <string.h>
 #include "sm2.h"
+#include "sm2_ipp.h"
 #include "../ecdsa/ecdsa.h"
 #include "../objects/objects.h"
 
-int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec)
+int openssl_sm2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec)
 {
     const EC_GROUP *group = EC_KEY_get0_group(ec);
     const BIGNUM *prvkey = EC_KEY_get0_private_key(ec);
@@ -137,7 +140,7 @@ ErrP:
     return 0;
 }
 
-int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec)
+int openssl_sm2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec)
 {
     const EC_GROUP *group = EC_KEY_get0_group(ec);
     const EC_POINT *pubkey = EC_KEY_get0_public_key(ec);
@@ -255,4 +258,40 @@ ErrP:
     if(bn_ctx) BN_CTX_free(bn_ctx);
     if(sm2sign) ECDSA_SIG_free(sm2sign);
     return 0;
+}
+
+int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec)
+{
+#ifdef OPENSSL_WITH_INTEL
+    int length = 0;
+    unsigned char prvkey[32] = {0};
+
+    length = get_prvkey_from_ec_key(ec, prvkey);
+    if(length <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - get_prvkey_from_ec_key failed %d:%s\n", __FUNCTION__, __FILE__, __LINE__, errno, strerror(errno));
+        return 0;
+    }
+    return ipp_sm2_sign((unsigned char*)dgst, dgstlen, sig, siglen, prvkey, length);
+#else
+    return openssl_sm2_sign(type, dgst, dgstlen, sig, siglen, ec);
+#endif
+}
+
+int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec)
+{
+#ifdef OPENSSL_WITH_INTEL
+    int length = 0;
+    unsigned char pubkey[65] = {0};
+
+    length = get_pubkey_from_ec_key(ec, pubkey);
+    if(length != 65)
+    {
+        fprintf(stderr, "%s %s:%u - get_pubkey_from_ec_key failed %d:%s\n", __FUNCTION__, __FILE__, __LINE__, errno, strerror(errno));
+        return 0;
+    }
+    return ipp_sm2_verify((unsigned char*)dgst, dgstlen, (unsigned char*)sig, siglen, pubkey, 65);
+#else
+    return openssl_sm2_verify(type, dgst, dgstlen, sig, siglen, ec);
+#endif
 }

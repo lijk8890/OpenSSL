@@ -16,15 +16,15 @@ typedef struct SM2Cipher_st {
 } SM2Cipher;
 DECLARE_ASN1_FUNCTIONS(SM2Cipher);
 
-int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec);
+int openssl_sm2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec);
 
-int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec);
+int openssl_sm2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec);
 
-int SM2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
+int openssl_sm2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
 
-int SM2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
+int openssl_sm2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
 
-int sm2_compute_key(                                                    \
+int openssl_sm2_compute_key(                                            \
     const EC_GROUP *group, const char *id, int id_len,                  \
     unsigned char *self_tmp_prvkey, int self_tmp_prvkey_len,            \
     unsigned char *self_tmp_pubkey, int self_tmp_pubkey_len,            \
@@ -35,6 +35,14 @@ int sm2_compute_key(                                                    \
     unsigned char *session_key, int session_key_len,                    \
     int is_server                                                       \
     );
+
+int SM2_sign(int type, const unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, EC_KEY *ec);
+
+int SM2_verify(int type, const unsigned char *dgst, int dgstlen, const unsigned char *sig, int siglen, EC_KEY *ec);
+
+int SM2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
+
+int SM2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
 
 int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned char *out);
 
@@ -47,10 +55,10 @@ void print_bn(BIGNUM *bn);
 void print_point(const EC_GROUP *group, EC_POINT *point);
 
 // unsigned char prvkey[32];
-int get_prvkey_from_ec_key(EC_KEY *ec_key, unsigned char *out);
+int get_prvkey_from_ec_key(EC_KEY *ec_key, unsigned char out[32]);
 
 // unsigned char pubkey[64+1];
-int get_pubkey_from_ec_key(EC_KEY *ec_key, unsigned char *out, int len);
+int get_pubkey_from_ec_key(EC_KEY *ec_key, unsigned char out[65]);
 
 #ifdef __cplusplus
 }

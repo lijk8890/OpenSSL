@@ -106,13 +106,13 @@ void print_point(const EC_GROUP *group, EC_POINT *point)
 }
 
 // unsigned char prvkey[32];
-int get_prvkey_from_ec_key(EC_KEY *ec_key, unsigned char *out)
+int get_prvkey_from_ec_key(EC_KEY *ec_key, unsigned char out[32])
 {
     return BN_bn2bin(EC_KEY_get0_private_key(ec_key), out);
 }
 
 // unsigned char pubkey[64+1];
-int get_pubkey_from_ec_key(EC_KEY *ec_key, unsigned char *out, int len)
+int get_pubkey_from_ec_key(EC_KEY *ec_key, unsigned char out[65])
 {
-    return EC_POINT_point2oct(EC_KEY_get0_group(ec_key), EC_KEY_get0_public_key(ec_key), POINT_CONVERSION_UNCOMPRESSED, out, len, NULL);
+    return EC_POINT_point2oct(EC_KEY_get0_group(ec_key), EC_KEY_get0_public_key(ec_key), POINT_CONVERSION_UNCOMPRESSED, out, 65, NULL);
 }

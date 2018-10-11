@@ -2,8 +2,8 @@
 #ifndef __SM3_IPP_H__
 #define __SM3_IPP_H__
 
-#include "../../ipp/include/ipp.h"
-#include "../../ipp/include/ippcp.h"
+#include "ipp.h"
+#include "ippcp.h"
 
 #define SM3_DIGEST_LENGTH 32
 #define SM3_BLOCK_SIZE 64

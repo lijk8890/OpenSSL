@@ -1,4 +1,7 @@
+#include <errno.h>
+#include <string.h>
 #include "sm2.h"
+#include "sm2_ipp.h"
 #include "../o_str.h"
 #include "../asn1/asn1.h"
 #include "../asn1/asn1t.h"
@@ -12,7 +15,7 @@ ASN1_SEQUENCE(SM2Cipher) = {
 } ASN1_SEQUENCE_END(SM2Cipher);
 IMPLEMENT_ASN1_FUNCTIONS(SM2Cipher);
 
-int SM2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec)
+int openssl_sm2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec)
 {
     const EC_GROUP *group = EC_KEY_get0_group(ec);
     const EC_POINT *pubkey = EC_KEY_get0_public_key(ec);
@@ -170,7 +173,7 @@ ErrP:
     return 0;
 }
 
-int SM2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec)
+int openssl_sm2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec)
 {
     const EC_GROUP *group = EC_KEY_get0_group(ec);
     const BIGNUM *prvkey = EC_KEY_get0_private_key(ec);
@@ -311,4 +314,40 @@ ErrP:
     if(bn_ctx) BN_CTX_free(bn_ctx);
     if(sm2cipher) SM2Cipher_free(sm2cipher);
     return 0;
+}
+
+int SM2_encrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec)
+{
+#ifdef OPENSSL_WITH_INTEL
+    int length = 0;
+    unsigned char pubkey[65] = {0};
+
+    length = get_pubkey_from_ec_key(ec, pubkey);
+    if(length != 65)
+    {
+        fprintf(stderr, "%s %s:%u - get_pubkey_from_ec_key failed %d:%s\n", __FUNCTION__, __FILE__, __LINE__, errno, strerror(errno));
+        return 0;
+    }
+    return ipp_sm2_encrypt((unsigned char*)in, inlen, out, pubkey, 65);
+#else
+    return openssl_sm2_encrypt(type, in, inlen, out, ec);
+#endif
+}
+
+int SM2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec)
+{
+#ifdef OPENSSL_WITH_INTEL
+    int length = 0;
+    unsigned char prvkey[32] = {0};
+
+    length = get_prvkey_from_ec_key(ec, prvkey);
+    if(length <= 0)
+    {
+        fprintf(stderr, "%s %s:%u - get_prvkey_from_ec_key failed %d:%s\n", __FUNCTION__, __FILE__, __LINE__, errno, strerror(errno));
+        return 0;
+    }
+    return ipp_sm2_decrypt((unsigned char*)in, inlen, out, prvkey, length);
+#else
+    return openssl_sm2_decrypt(type, in, inlen, out, ec);
+#endif
 }

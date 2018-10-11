@@ -2,13 +2,15 @@
 #ifndef __IPP_SM2_H__
 #define __IPP_SM2_H__
 
-#include "../../ipp/include/ipp.h"
-#include "../../ipp/include/ippcp.h"
+#include "ipp.h"
+#include "ippcp.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+int ipp_sm2_keypair(unsigned char prvkey[32], unsigned char pubkey[65]);
 
 int ipp_sm2_sign(unsigned char *dgst, int dgstlen, unsigned char *sig, int *siglen, unsigned char *prvkey, int keylen);
 
