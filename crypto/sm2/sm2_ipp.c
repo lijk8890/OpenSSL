@@ -589,9 +589,10 @@ int ipp_sm2_decrypt(unsigned char *in, int inlen, unsigned char *out, unsigned c
 
     if(memcmp(hash, md, hashLen) != 0)
     {
-        fprintf(stderr, "%s %s:%u - memcmp failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - memcmp hash failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto ErrP;
     }
+    memcpy(out, plainText, cipherTextLen);
 
     if(plainText) free(plainText);
     if(xCoordinate) BN_free(xCoordinate);

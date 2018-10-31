@@ -22,13 +22,13 @@ int ipp_sms4_cbc_encrypt(unsigned char *src, unsigned char *dst, int len, unsign
 int ipp_sms4_cbc_decrypt(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv);
 
 
-int ipp_sms4_ecb_encrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key);
+int ipp_sms4_ecb_encrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key);
 
-int ipp_sms4_ecb_decrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key);
+int ipp_sms4_ecb_decrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key);
 
-int ipp_sms4_cbc_encrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv);
+int ipp_sms4_cbc_encrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv);
 
-int ipp_sms4_cbc_decrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv);
+int ipp_sms4_cbc_decrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv);
 
 #ifdef __cplusplus
 }

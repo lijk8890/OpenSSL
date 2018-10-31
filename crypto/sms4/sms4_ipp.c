@@ -175,7 +175,7 @@ ErrP:
 }
 
 
-int ipp_sms4_ecb_encrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key)
+int ipp_sms4_ecb_encrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key)
 {
     int i = 0;
     int padding = 0;
@@ -237,7 +237,7 @@ ErrP:
     return 0;
 }
 
-int ipp_sms4_ecb_decrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key)
+int ipp_sms4_ecb_decrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key)
 {
     int padding = 0;
     int length = 0;
@@ -284,7 +284,7 @@ ErrP:
     return 0;
 }
 
-int ipp_sms4_cbc_encrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv)
+int ipp_sms4_cbc_encrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv)
 {
     int i = 0;
     int padding = 0;
@@ -346,7 +346,7 @@ ErrP:
     return 0;
 }
 
-int ipp_sms4_cbc_decrypt_with_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv)
+int ipp_sms4_cbc_decrypt_auto_padding(unsigned char *src, unsigned char *dst, int len, unsigned char *key, unsigned char *iv)
 {
     int padding = 0;
     int length = 0;
