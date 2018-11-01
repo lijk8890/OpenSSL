@@ -587,9 +587,9 @@ int ipp_sm2_decrypt(unsigned char *in, int inlen, unsigned char *out, unsigned c
     ipp_sm3_final(sm3Ctx, md);
     if(sm3Ctx) ipp_sm3_delete(sm3Ctx);
 
-    if(memcmp(hash, md, hashLen) != 0)
+    if(hashLen != 32 || memcmp(hash, md, hashLen) != 0)
     {
-        fprintf(stderr, "%s %s:%u - memcmp hash failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - memcmp digest failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto ErrP;
     }
     memcpy(out, plainText, cipherTextLen);

@@ -286,7 +286,7 @@ int openssl_sm2_decrypt(int type, const unsigned char *in, int inlen, unsigned c
 
     if(hashLen != SM3_DIGEST_LENGTH || OPENSSL_memcmp(md, hash, hashLen) != 0)
     {
-        fprintf(stderr, "%s %s:%u - OPENSSL_memcmp failed\n", __FUNCTION__, __FILE__, __LINE__);
+        fprintf(stderr, "%s %s:%u - OPENSSL_memcmp digest failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto ErrP;
     }
     outlen = cipherTextLen;
