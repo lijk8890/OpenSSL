@@ -792,7 +792,7 @@ int MAIN(int argc, char **argv)
                 if (!X509_set_serialNumber(x509ss, serial))
                     goto end;
             } else {
-                if (!rand_serial(NULL, X509_get_serialNumber(x509ss)))
+                if (!rand_serial(NULL, X509_get_serialNumber(x509ss)))    // ljk
                     goto end;
             }
 

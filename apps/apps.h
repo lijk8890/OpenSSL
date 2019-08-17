@@ -372,7 +372,7 @@ void store_setup_crl_download(X509_STORE *st);
 
 # define APP_PASS_LEN    1024
 
-# define SERIAL_RAND_BITS        64
+# define SERIAL_RAND_BITS        2*64
 
 int app_isdir(const char *);
 int fileno_stdin(void);

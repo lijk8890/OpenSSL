@@ -1011,7 +1011,7 @@ int MAIN(int argc, char **argv)
         if (verbose)
             BIO_printf(bio_err, "policy is %s\n", policy);
 
-        if ((serialfile = NCONF_get_string(conf, section, ENV_SERIAL))
+        if ((serialfile = NCONF_get_string(conf, section, ENV_SERIAL))    // ljk
             == NULL) {
             lookup_fail(section, ENV_SERIAL);
             goto err;

@@ -4223,47 +4223,72 @@
 #define NID_sm2sign             963
 #define OBJ_sm2sign             OBJ_sm,1L,301L,1L
 
+#define SN_sm2exchange          "SM2Exchange"
+#define LN_sm2exchange          "sm2exchange"
+#define NID_sm2exchange         964
+#define OBJ_sm2exchange         OBJ_sm,1L,301L,2L
+
 #define SN_sm2encrypt           "SM2Encrypt"
 #define LN_sm2encrypt           "sm2encrypt"
-#define NID_sm2encrypt          964
+#define NID_sm2encrypt          965
 #define OBJ_sm2encrypt          OBJ_sm,1L,301L,3L
 
 #define SN_sm3          "SM3"
 #define LN_sm3          "sm3"
-#define NID_sm3         965
+#define NID_sm3         966
 #define OBJ_sm3         OBJ_sm,1L,401L
 
 #define SN_hmac_sm3             "HMAC-SM3"
 #define LN_hmac_sm3             "hmac-sm3"
-#define NID_hmac_sm3            966
+#define NID_hmac_sm3            967
 #define OBJ_hmac_sm3            OBJ_sm,1L,401L,2L
 
 #define SN_sm3withsm2           "SM3WithSM2"
 #define LN_sm3withsm2           "sm3withsm2"
-#define NID_sm3withsm2          967
+#define NID_sm3withsm2          968
 #define OBJ_sm3withsm2          OBJ_sm,1L,501L
 
 #define SN_sm3withrsa           "SM3WithRSA"
 #define LN_sm3withrsa           "sm3withrsa"
-#define NID_sm3withrsa          968
+#define NID_sm3withrsa          969
 #define OBJ_sm3withrsa          OBJ_sm,1L,504L
+
+#define SN_sm9sign              "SM9Sign"
+#define LN_sm9sign              "sm9sign"
+#define NID_sm9sign             970
+#define OBJ_sm9sign             OBJ_sm,1L,302L,1L
+
+#define SN_sm9keyagreement              "SM9KeyAgreement"
+#define LN_sm9keyagreement              "sm9keyagreement"
+#define NID_sm9keyagreement             971
+#define OBJ_sm9keyagreement             OBJ_sm,1L,302L,2L
+
+#define SN_sm9encrypt           "SM9Encrypt"
+#define LN_sm9encrypt           "sm9encrypt"
+#define NID_sm9encrypt          972
+#define OBJ_sm9encrypt          OBJ_sm,1L,302L,3L
+
+#define SN_sm9bn256v1           "sm9bn256v1"
+#define LN_sm9bn256v1           "sm9bn256v1"
+#define NID_sm9bn256v1          973
+#define OBJ_sm9bn256v1          OBJ_sm,1L,302L,6L,1L
 
 #define SN_pkcs7_data_sm2               "pkcs7-data-sm2"
 #define LN_pkcs7_data_sm2               "pkcs7-data-sm2"
-#define NID_pkcs7_data_sm2              969
+#define NID_pkcs7_data_sm2              974
 #define OBJ_pkcs7_data_sm2              OBJ_sm,6L,1L,4L,2L,1L
 
 #define SN_pkcs7_signedData_sm2         "pkcs7-signedData-sm2"
 #define LN_pkcs7_signedData_sm2         "pkcs7-signedData-sm2"
-#define NID_pkcs7_signedData_sm2                970
+#define NID_pkcs7_signedData_sm2                975
 #define OBJ_pkcs7_signedData_sm2                OBJ_sm,6L,1L,4L,2L,2L
 
 #define SN_pkcs7_envelopedData_sm2              "pkcs7-envelopedData-sm2"
 #define LN_pkcs7_envelopedData_sm2              "pkcs7-envelopedData-sm2"
-#define NID_pkcs7_envelopedData_sm2             971
+#define NID_pkcs7_envelopedData_sm2             976
 #define OBJ_pkcs7_envelopedData_sm2             OBJ_sm,6L,1L,4L,2L,3L
 
 #define SN_pkcs7_signedAndEnvelopedData_sm2             "pkcs7-signedAndEnvelopedData-sm2"
 #define LN_pkcs7_signedAndEnvelopedData_sm2             "pkcs7-signedAndEnvelopedData-sm2"
-#define NID_pkcs7_signedAndEnvelopedData_sm2            972
+#define NID_pkcs7_signedAndEnvelopedData_sm2            977
 #define OBJ_pkcs7_signedAndEnvelopedData_sm2            OBJ_sm,6L,1L,4L,2L,4L

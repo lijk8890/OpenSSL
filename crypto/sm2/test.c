@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
     int outlen = 0;
     unsigned char in[256] = "0123456789";
     unsigned char out[256] = {0};
+    unsigned char client[256] = {0};
+    unsigned char server[256] = {0};
     unsigned char prvkey[32] = {
         0x64, 0x06, 0xa2, 0x5a, 0xde, 0xe3, 0xe9, 0x85,
         0x56, 0x6a, 0x17, 0xf1, 0xca, 0xbd, 0xd2, 0xee,
@@ -97,25 +99,31 @@ do{
     PRINT_HEX(pubkey, 65);
 
     // 客户端
-    ret = ipp_sm2_compute_key("1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 0);
+    ret = ipp_sm2_compute_key("1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, client, 48, 0);
     if(ret <= 0)
     {
         fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
     fprintf(stdout, "%s %s:%u - sm2_compute_key succeed:\n", __FUNCTION__, __FILE__, __LINE__);
-    PRINT_HEX(out, ret);
+    PRINT_HEX(client, ret);
 #endif
 
     // 服务端
-    ret = openssl_sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, out, 48, 1);
+    ret = openssl_sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, server, 48, 1);
     if(ret <= 0)
     {
         fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
         goto EndP;
     }
     fprintf(stdout, "%s %s:%u - sm2_compute_key succeed:\n", __FUNCTION__, __FILE__, __LINE__);
-    PRINT_HEX(out, ret);
+    PRINT_HEX(server, ret);
+
+    if(memcmp(client, server, 48) != 0)
+    {
+        fprintf(stderr, "%s %s:%u - sm2_compute_key cmp failed\n", __FUNCTION__, __FILE__, __LINE__);
+        goto EndP;
+    }
 
     // 加密
     outlen = SM2_encrypt(NID_sm3, in, 10, out, ec);

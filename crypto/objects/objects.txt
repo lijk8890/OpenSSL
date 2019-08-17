@@ -1357,11 +1357,17 @@ sm 1 104 1					: SMS4-ECB								: sms4-ecb
 sm 1 104 2					: SMS4-CBC								: sms4-cbc
 sm 1 301					: sm2p256v1								: sm2p256v1
 sm 1 301 1					: SM2Sign								: sm2sign
+sm 1 301 2					: SM2Exchange							: sm2exchange
 sm 1 301 3					: SM2Encrypt							: sm2encrypt
 sm 1 401					: SM3									: sm3
 sm 1 401 2					: HMAC-SM3								: hmac-sm3
 sm 1 501					: SM3WithSM2							: sm3withsm2
 sm 1 504					: SM3WithRSA							: sm3withrsa
+
+sm 1 302 1					: SM9Sign								: sm9sign
+sm 1 302 2					: SM9KeyAgreement						: sm9keyagreement
+sm 1 302 3					: SM9Encrypt							: sm9encrypt
+sm 1 302 6	1				: sm9bn256v1							: sm9bn256v1
 
 sm 6 1 4 2 1				: pkcs7-data-sm2						: pkcs7-data-sm2
 sm 6 1 4 2 2				: pkcs7-signedData-sm2					: pkcs7-signedData-sm2
