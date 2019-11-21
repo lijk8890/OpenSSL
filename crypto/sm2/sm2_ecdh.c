@@ -3,11 +3,12 @@
 #include "../../ssl/ssl_locl.h"
 
 int openssl_sm2_compute_key(                                            \
-    const EC_GROUP *group, const char *id, int id_len,                  \
+    const EC_GROUP *group, const char *self_id, int self_id_len,        \
     unsigned char *self_tmp_prvkey, int self_tmp_prvkey_len,            \
     unsigned char *self_tmp_pubkey, int self_tmp_pubkey_len,            \
     unsigned char *self_enc_prvkey, int self_enc_prvkey_len,            \
     unsigned char *self_enc_pubkey, int self_enc_pubkey_len,            \
+    const char *peer_id, int peer_id_len,                               \
     unsigned char *peer_tmp_pubkey, int peer_tmp_pubkey_len,            \
     unsigned char *peer_enc_pubkey, int peer_enc_pubkey_len,            \
     unsigned char *session_key, int session_key_len,                    \
@@ -196,16 +197,16 @@ int openssl_sm2_compute_key(                                            \
     if(is_server)
     {
         //Caculate ZA
-        get_z(id, id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[65]);
+        get_z(self_id, self_id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[65]);
         //Caculate ZB
-        get_z(id, id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[97]);
+        get_z(peer_id, peer_id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[97]);
     }
     else
     {
         //Caculate ZA
-        get_z(id, id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[65]);
+        get_z(peer_id, peer_id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[65]);
         //Caculate ZB
-        get_z(id, id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[97]);
+        get_z(self_id, self_id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[97]);
     }
     kdf_sm3(&pxyzab[1], 128, session_key, session_key_len);
 
@@ -297,9 +298,9 @@ int SM2_compute_key(SSL *s, const EC_KEY *ecdh, const EC_POINT *point, unsigned 
 
 #ifdef OPENSSL_WITH_INTEL
     return ipp_sm2_compute_key(id, 16, self_tmp_prvkey, self_tmp_prvkey_len, self_tmp_pubkey, 65, \
-        self_enc_prvkey, 32, self_enc_pubkey, 65, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, 48, s->server);
+        self_enc_prvkey, 32, self_enc_pubkey, 65, id, 16, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, 48, s->server);
 #else
     return openssl_sm2_compute_key(group, id, 16, self_tmp_prvkey, self_tmp_prvkey_len, self_tmp_pubkey, 65, \
-        self_enc_prvkey, 32, self_enc_pubkey, 65, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, 48, s->server);
+        self_enc_prvkey, 32, self_enc_pubkey, 65, id, 16, peer_tmp_pubkey, 65, peer_enc_pubkey, 65, out, 48, s->server);
 #endif
 }

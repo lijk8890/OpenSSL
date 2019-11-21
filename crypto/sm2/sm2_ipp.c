@@ -635,11 +635,12 @@ ErrP:
 }
 
 int ipp_sm2_compute_key(                                                \
-    const char *id, int id_len,                                         \
+    const char *self_id, int self_id_len,                               \
     unsigned char *self_tmp_prvkey, int self_tmp_prvkey_len,            \
     unsigned char *self_tmp_pubkey, int self_tmp_pubkey_len,            \
     unsigned char *self_enc_prvkey, int self_enc_prvkey_len,            \
     unsigned char *self_enc_pubkey, int self_enc_pubkey_len,            \
+    const char *peer_id, int peer_id_len,                               \
     unsigned char *peer_tmp_pubkey, int peer_tmp_pubkey_len,            \
     unsigned char *peer_enc_pubkey, int peer_enc_pubkey_len,            \
     unsigned char *session_key, int session_key_len,                    \
@@ -661,7 +662,7 @@ int ipp_sm2_compute_key(                                                \
     IppsBigNumState *h = newSM2_BN(SM2_INTS, sm2h);
     IppsBigNumState *n = newSM2_BN(SM2_INTS, sm2n);
     IppsMontState *mn = newSM2_Mont(SM2_INTS, sm2n);
-    IppsBigNumState *t = newSM2_BN(SM2_INTS*2, NULL);
+    IppsBigNumState *r = newSM2_BN(SM2_INTS+1, NULL);
     IppsECCPPointState *point = newSM2_Point(SM2_BITS);
 
     Ipp8u pxyzab[128] = {0};
@@ -712,20 +713,20 @@ int ipp_sm2_compute_key(                                                \
 
     // t = (d + xbar * r) mod n
     ippsMontForm(x1bar, mn, x1bar);
-    status = ippsMontMul(x1bar, self_tmp_bn, mn, t);
+    status = ippsMontMul(x1bar, self_tmp_bn, mn, r);
     if(status != ippStsNoErr)
     {
         fprintf(stderr, "%s %s:%u - %s\n", __FUNCTION__, __FILE__, __LINE__, ippGetStatusString(status));
         goto ErrP;
     }
-    ippsAdd_BN(self_enc_bn, t, t);
-    ippsMod_BN(t, n, t);
+    ippsAdd_BN(self_enc_bn, r, r);
+    ippsMod_BN(r, n, r);
 
     // [h * t](P + xbar * R) = (x, y)
-    ippsMul_BN(h, t, t);
+    ippsMul_BN(h, r, r);
     ippsECCPMulPointScalar(peer_tmp_point, x2bar, point, eccp);
     ippsECCPAddPoint(peer_enc_point, point, point, eccp);
-    ippsECCPMulPointScalar(point, t, point, eccp);
+    ippsECCPMulPointScalar(point, r, point, eccp);
 
     status = ippsECCPCheckPoint(point, &result, eccp);
     if(status != ippStsNoErr || result != ippECValid)
@@ -740,18 +741,18 @@ int ipp_sm2_compute_key(                                                \
     ippsGetOctString_BN(&pxyzab[32], 32, y);
     if(is_server)
     {
-        ipp_get_z(id, id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[64]);
-        ipp_get_z(id, id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[96]);
+        ipp_get_z(self_id, self_id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[64]);
+        ipp_get_z(peer_id, peer_id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[96]);
     }
     else
     {
-        ipp_get_z(id, id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[64]);
-        ipp_get_z(id, id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[96]);
+        ipp_get_z(peer_id, peer_id_len, peer_enc_pubkey, peer_enc_pubkey_len, &pxyzab[64]);
+        ipp_get_z(self_id, self_id_len, self_enc_pubkey, self_enc_pubkey_len, &pxyzab[96]);
     }
     ipp_kdf_sm3(pxyzab, 128, session_key, session_key_len);
 
     if(point) free(point);
-    if(t) free(t);
+    if(r) free(r);
     if(n) free(n);
     if(mn) free(mn);
     if(h) free(h);
@@ -768,7 +769,7 @@ int ipp_sm2_compute_key(                                                \
     return session_key_len;
 ErrP:
     if(point) free(point);
-    if(t) free(t);
+    if(r) free(r);
     if(n) free(n);
     if(mn) free(mn);
     if(h) free(h);

@@ -99,7 +99,7 @@ do{
     PRINT_HEX(pubkey, 65);
 
     // 客户端
-    ret = ipp_sm2_compute_key("1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, client, 48, 0);
+    ret = ipp_sm2_compute_key("1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, "1234567812345678", 16, pubkey, 65, pubkey, 65, client, 48, 0);
     if(ret <= 0)
     {
         fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);
@@ -110,7 +110,7 @@ do{
 #endif
 
     // 服务端
-    ret = openssl_sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, pubkey, 65, pubkey, 65, server, 48, 1);
+    ret = openssl_sm2_compute_key(group, "1234567812345678", 16, prvkey, 32, pubkey, 65, prvkey, 32, pubkey, 65, "1234567812345678", 16, pubkey, 65, pubkey, 65, server, 48, 1);
     if(ret <= 0)
     {
         fprintf(stderr, "%s %s:%u - sm2_compute_key failed\n", __FUNCTION__, __FILE__, __LINE__);

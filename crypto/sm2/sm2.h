@@ -25,11 +25,12 @@ int openssl_sm2_encrypt(int type, const unsigned char *in, int inlen, unsigned c
 int openssl_sm2_decrypt(int type, const unsigned char *in, int inlen, unsigned char *out, EC_KEY *ec);
 
 int openssl_sm2_compute_key(                                            \
-    const EC_GROUP *group, const char *id, int id_len,                  \
+    const EC_GROUP *group, const char *self_id, int self_id_len,        \
     unsigned char *self_tmp_prvkey, int self_tmp_prvkey_len,            \
     unsigned char *self_tmp_pubkey, int self_tmp_pubkey_len,            \
     unsigned char *self_enc_prvkey, int self_enc_prvkey_len,            \
     unsigned char *self_enc_pubkey, int self_enc_pubkey_len,            \
+    const char *peer_id, int peer_id_len,                               \
     unsigned char *peer_tmp_pubkey, int peer_tmp_pubkey_len,            \
     unsigned char *peer_enc_pubkey, int peer_enc_pubkey_len,            \
     unsigned char *session_key, int session_key_len,                    \
