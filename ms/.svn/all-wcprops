@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms
+END
+reqCA.ss
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/reqCA.ss
+END
+applink.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/applink.c
+END
+testencce.bat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testencce.bat
+END
+tpemce.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/tpemce.bat
+END
+uplink.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/uplink.c
+END
+testpem.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testpem.bat
+END
+mw.bat
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/mw.bat
+END
+uplink.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/uplink.h
+END
+x86asm.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/x86asm.bat
+END
+testce.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testce.bat
+END
+do_win64a.bat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/do_win64a.bat
+END
+reqU.ss
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/reqU.ss
+END
+keyU.ss
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/keyU.ss
+END
+testssce.bat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testssce.bat
+END
+uplink-common.pl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/uplink-common.pl
+END
+tencce.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/tencce.bat
+END
+do_ms.bat
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/do_ms.bat
+END
+do_win64i.bat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/do_win64i.bat
+END
+uplink-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/uplink-x86_64.pl
+END
+testenc.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testenc.bat
+END
+tpem.bat
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/tpem.bat
+END
+uplink.pl
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/uplink.pl
+END
+uplink-ia64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/uplink-ia64.pl
+END
+bcb4.bat
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/bcb4.bat
+END
+keyCA.ss
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/keyCA.ss
+END
+32all.bat
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/32all.bat
+END
+tlhelp32.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/tlhelp32.h
+END
+test.bat
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/test.bat
+END
+certCA.ss
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/certCA.ss
+END
+do_nasm.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/do_nasm.bat
+END
+cmp.pl
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/cmp.pl
+END
+testss.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testss.bat
+END
+mingw32.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/mingw32.bat
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/README
+END
+testpemce.bat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testpemce.bat
+END
+tenc.bat
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/tenc.bat
+END
+uplink-x86.pl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/uplink-x86.pl
+END
+certCA.srl
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/certCA.srl
+END
+req2CA.ss
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/req2CA.ss
+END
+.rnd
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/.rnd
+END
+certU.ss
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/certU.ss
+END
+do_nt.bat
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/do_nt.bat
+END
+speed32.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/speed32.bat
+END
+testce2.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/ms/testce2.bat
+END

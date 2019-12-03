@@ -1,0 +1,611 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/gmssl/!svn/ver/706/openssl-1.0.2n/apps
+END
+s_client.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s_client.c
+END
+speed.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/speed.c
+END
+dh1024.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dh1024.pem
+END
+ocsp.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ocsp.c
+END
+engine.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/engine.c
+END
+enc.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/enc.c
+END
+dsa-pca.pem
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dsa-pca.pem
+END
+ecparam.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ecparam.c
+END
+rsautl.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/rsautl.c
+END
+vms_term_sock.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/vms_term_sock.c
+END
+client.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/client.pem
+END
+dh4096.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dh4096.pem
+END
+timeouts.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/timeouts.h
+END
+s512-key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s512-key.pem
+END
+vms_term_sock.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/vms_term_sock.h
+END
+errstr.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/errstr.c
+END
+s1024key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s1024key.pem
+END
+dh512.pem
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dh512.pem
+END
+testCA.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/testCA.pem
+END
+server.srl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/server.srl
+END
+pca-key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pca-key.pem
+END
+asn1pars.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/asn1pars.c
+END
+s_server.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s_server.c
+END
+pkeyparam.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pkeyparam.c
+END
+sess_id.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/sess_id.c
+END
+s_apps.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s_apps.h
+END
+dh.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dh.c
+END
+cert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/cert.pem
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/Makefile
+END
+ciphers.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ciphers.c
+END
+progs.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/progs.h
+END
+passwd.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/passwd.c
+END
+dgst.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dgst.c
+END
+winrand.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/winrand.c
+END
+install-apps.com
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/install-apps.com
+END
+verify.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/verify.c
+END
+server.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/server.pem
+END
+tsget
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/tsget
+END
+x509.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/x509.c
+END
+pkey.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pkey.c
+END
+ca-key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ca-key.pem
+END
+dh2048.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dh2048.pem
+END
+rsa8192.pem
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/rsa8192.pem
+END
+s_socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s_socket.c
+END
+CA.com
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/CA.com
+END
+cms.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/cms.c
+END
+progs.pl
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/progs.pl
+END
+gendh.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/gendh.c
+END
+version.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/version.c
+END
+req.pem
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/req.pem
+END
+ec.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ec.c
+END
+req.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/706/openssl-1.0.2n/apps/req.c
+END
+server2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/server2.pem
+END
+privkey.pem
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/privkey.pem
+END
+pkcs8.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pkcs8.c
+END
+dsaparam.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dsaparam.c
+END
+oid.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/oid.cnf
+END
+gendsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/gendsa.c
+END
+spkac.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/spkac.c
+END
+genpkey.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/genpkey.c
+END
+openssl.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/openssl.cnf
+END
+crl2p7.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/crl2p7.c
+END
+openssl-vms.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/openssl-vms.cnf
+END
+CA.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/CA.sh
+END
+prime.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/prime.c
+END
+pca-cert.srl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pca-cert.srl
+END
+testdsa.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/testdsa.h
+END
+dsa1024.pem
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dsa1024.pem
+END
+s512-req.pem
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s512-req.pem
+END
+genrsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/genrsa.c
+END
+crl.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/crl.c
+END
+s1024req.pem
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s1024req.pem
+END
+s_time.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s_time.c
+END
+CA.pl.in
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/CA.pl.in
+END
+dsap.pem
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dsap.pem
+END
+pca-req.pem
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pca-req.pem
+END
+testrsa.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/testrsa.h
+END
+ca-cert.srl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ca-cert.srl
+END
+pkeyutl.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pkeyutl.c
+END
+dsa512.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dsa512.pem
+END
+pkcs12.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pkcs12.c
+END
+apps.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/apps.c
+END
+srp.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/srp.c
+END
+nseq.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/nseq.c
+END
+s_cb.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/s_cb.c
+END
+vms_decc_init.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/vms_decc_init.c
+END
+ca-req.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ca-req.pem
+END
+dsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dsa.c
+END
+apps.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/703/openssl-1.0.2n/apps/apps.h
+END
+smime.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/smime.c
+END
+CA.pl
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/CA.pl
+END
+dhparam.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dhparam.c
+END
+openssl.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/openssl.c
+END
+ca.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/704/openssl-1.0.2n/apps/ca.c
+END
+app_rand.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/app_rand.c
+END
+rand.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/rand.c
+END
+rsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/rsa.c
+END
+ts.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/ts.c
+END
+pkcs7.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/pkcs7.c
+END
+dsa-ca.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/dsa-ca.pem
+END
+makeapps.com
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/makeapps.com
+END

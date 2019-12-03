@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/rc4/asm
+END
+rc4-md5-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/rc4/asm/rc4-md5-x86_64.pl
+END
+rc4-parisc.pl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/rc4/asm/rc4-parisc.pl
+END
+rc4-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/rc4/asm/rc4-586.pl
+END
+rc4-ia64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/rc4/asm/rc4-ia64.pl
+END
+rc4-s390x.pl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/rc4/asm/rc4-s390x.pl
+END
+rc4-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/rc4/asm/rc4-x86_64.pl
+END

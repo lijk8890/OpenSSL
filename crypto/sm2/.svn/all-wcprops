@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/735/openssl-1.0.2n/crypto/sm2
+END
+sm2_ipp.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/732/openssl-1.0.2n/crypto/sm2/sm2_ipp.h
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/723/openssl-1.0.2n/crypto/sm2/test.c
+END
+sm2_sign.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/674/openssl-1.0.2n/crypto/sm2/sm2_sign.c
+END
+sm2test.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/402/openssl-1.0.2n/crypto/sm2/sm2test.c
+END
+sm2_asn1.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/726/openssl-1.0.2n/crypto/sm2/sm2_asn1.c
+END
+sm2_ecdh.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/723/openssl-1.0.2n/crypto/sm2/sm2_ecdh.c
+END
+sm2_enc.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/734/openssl-1.0.2n/crypto/sm2/sm2_enc.c
+END
+sm2.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/733/openssl-1.0.2n/crypto/sm2/sm2.h
+END
+sm2_lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/708/openssl-1.0.2n/crypto/sm2/sm2_lib.c
+END
+sm2_asn1.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/726/openssl-1.0.2n/crypto/sm2/sm2_asn1.h
+END
+sm2_ipp.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/735/openssl-1.0.2n/crypto/sm2/sm2_ipp.c
+END
+Makefile.test
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/521/openssl-1.0.2n/crypto/sm2/Makefile.test
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/727/openssl-1.0.2n/crypto/sm2/Makefile
+END

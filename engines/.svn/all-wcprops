@@ -1,0 +1,305 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines
+END
+e_4758cca_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_4758cca_err.h
+END
+e_cswift.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_cswift.c
+END
+alpha.opt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/alpha.opt
+END
+e_atalla.ec
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_atalla.ec
+END
+e_cswift.ec
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_cswift.ec
+END
+axp.opt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/axp.opt
+END
+e_aep.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_aep.c
+END
+e_cswift_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_cswift_err.c
+END
+e_aep.ec
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_aep.ec
+END
+e_cswift_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_cswift_err.h
+END
+e_aep_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_aep_err.c
+END
+e_padlock.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_padlock.c
+END
+makeengines.com
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/makeengines.com
+END
+e_chil.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_chil.c
+END
+ia64.opt
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ia64.opt
+END
+e_capi.ec
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_capi.ec
+END
+e_aep_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_aep_err.h
+END
+e_padlock.ec
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_padlock.ec
+END
+e_gmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_gmp.c
+END
+e_4758cca.ec
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_4758cca.ec
+END
+e_chil.ec
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_chil.ec
+END
+e_chil_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_chil_err.c
+END
+e_gmp.ec
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_gmp.ec
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/Makefile
+END
+e_gmp_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_gmp_err.c
+END
+e_chil_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_chil_err.h
+END
+e_sureware.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_sureware.c
+END
+e_atalla.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_atalla.c
+END
+e_gmp_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_gmp_err.h
+END
+e_nuron.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_nuron.c
+END
+e_ubsec.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_ubsec.c
+END
+e_sureware.ec
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_sureware.ec
+END
+capierr.bat
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/capierr.bat
+END
+e_sureware_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_sureware_err.c
+END
+e_atalla_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_atalla_err.c
+END
+e_nuron.ec
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_nuron.ec
+END
+e_ubsec.ec
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_ubsec.ec
+END
+e_nuron_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_nuron_err.c
+END
+e_ubsec_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_ubsec_err.c
+END
+e_sureware_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_sureware_err.h
+END
+vax.opt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/vax.opt
+END
+e_atalla_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_atalla_err.h
+END
+e_capi.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_capi.c
+END
+e_4758cca.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_4758cca.c
+END
+e_nuron_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_nuron_err.h
+END
+e_ubsec_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_ubsec_err.h
+END
+engine_vector.mar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/engine_vector.mar
+END
+e_capi_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_capi_err.c
+END
+e_4758cca_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_4758cca_err.c
+END
+e_capi_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/e_capi_err.h
+END

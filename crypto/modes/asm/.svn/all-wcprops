@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm
+END
+ghash-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-x86_64.pl
+END
+ghash-parisc.pl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-parisc.pl
+END
+ghash-ia64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-ia64.pl
+END
+ghash-alpha.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-alpha.pl
+END
+ghash-x86.pl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-x86.pl
+END
+ghashv8-armx.pl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghashv8-armx.pl
+END
+ghash-s390x.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-s390x.pl
+END
+aesni-gcm-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/aesni-gcm-x86_64.pl
+END
+ghash-sparcv9.pl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-sparcv9.pl
+END
+ghash-armv4.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghash-armv4.pl
+END
+ghashp8-ppc.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/modes/asm/ghashp8-ppc.pl
+END

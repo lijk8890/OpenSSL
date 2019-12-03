@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/378/openssl-1.0.2n/certs/infosec/server
+END
+server.p12
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gmssl/!svn/ver/378/openssl-1.0.2n/certs/infosec/server/server.p12
+END
+server.req
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gmssl/!svn/ver/378/openssl-1.0.2n/certs/infosec/server/server.req
+END
+server.crt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gmssl/!svn/ver/378/openssl-1.0.2n/certs/infosec/server/server.crt
+END
+server.key
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gmssl/!svn/ver/378/openssl-1.0.2n/certs/infosec/server/server.key
+END
+server.p7b
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gmssl/!svn/ver/378/openssl-1.0.2n/certs/infosec/server/server.p7b
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs
+END
+smroot.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smroot.pem
+END
+smrsa1.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smrsa1.pem
+END
+smdsap.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smdsap.pem
+END
+smrsa2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smrsa2.pem
+END
+ca.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/ca.cnf
+END
+smdsa1.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smdsa1.pem
+END
+smec1.pem
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smec1.pem
+END
+smrsa3.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smrsa3.pem
+END
+mksmime-certs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/mksmime-certs.sh
+END
+smdsa2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smdsa2.pem
+END
+smec2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smec2.pem
+END
+smdsa3.pem
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smdsa3.pem
+END
+smdh.pem
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/test/smime-certs/smdh.pem
+END

@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine
+END
+eng_lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_lib.c
+END
+eng_cnf.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_cnf.c
+END
+tb_cipher.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_cipher.c
+END
+eng_pkey.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_pkey.c
+END
+eng_all.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_all.c
+END
+eng_rdrand.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_rdrand.c
+END
+eng_fat.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_fat.c
+END
+eng_list.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_list.c
+END
+tb_digest.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_digest.c
+END
+tb_ecdsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_ecdsa.c
+END
+enginetest.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/enginetest.c
+END
+eng_cryptodev.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_cryptodev.c
+END
+tb_rand.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_rand.c
+END
+engine.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/engine.h
+END
+tb_rsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_rsa.c
+END
+eng_openssl.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_openssl.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/README
+END
+tb_pkmeth.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_pkmeth.c
+END
+tb_asnmth.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_asnmth.c
+END
+eng_table.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_table.c
+END
+tb_dh.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_dh.c
+END
+eng_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_err.c
+END
+tb_store.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_store.c
+END
+eng_dyn.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_dyn.c
+END
+eng_int.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_int.h
+END
+tb_ecdh.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_ecdh.c
+END
+eng_init.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_init.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/Makefile
+END
+tb_dsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/tb_dsa.c
+END
+eng_ctrl.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/engine/eng_ctrl.c
+END

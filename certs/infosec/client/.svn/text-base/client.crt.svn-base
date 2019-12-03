@@ -1,0 +1,59 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            1b:5f:14:dc:e4:33:01:49:84:b1:5d:ea:7b:55:09:cb
+    Signature Algorithm: sm3withsm2
+        Issuer: C=CN, ST=BeiJing, L=BeiJing, O=InfoSec, OU=R&D, CN=ca/emailAddress=lijk@infosec.com.cn
+        Validity
+            Not Before: Mar 16 08:35:29 2018 GMT
+            Not After : Mar 13 08:35:29 2028 GMT
+        Subject: C=CN, ST=BeiJing, L=BeiJing, O=InfoSec, OU=R&D, CN=client/emailAddress=lijk@infosec.com.cn
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub: 
+                    04:2f:a6:20:52:b4:10:eb:f6:26:32:29:3c:bc:91:
+                    c3:4d:73:68:61:7d:d7:ea:39:b2:bd:16:d8:25:fb:
+                    67:fa:9f:2f:58:0c:3e:d7:95:9c:89:2e:af:af:54:
+                    bf:8a:b0:20:a5:5d:d9:30:a2:fd:38:cb:65:10:48:
+                    6c:e1:08:b2:33
+                ASN1 OID: sm2p256v1
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                AD:67:D8:22:76:2C:63:44:2A:9A:FE:5E:5C:A0:2D:09:B7:AC:F0:B9
+            X509v3 Authority Key Identifier: 
+                keyid:79:5F:6A:D5:8A:C7:83:CC:7A:B3:CB:A3:06:67:F6:A2:6D:D5:C6:F0
+                DirName:/C=CN/ST=BeiJing/L=BeiJing/O=InfoSec/OU=R&D/CN=ca/emailAddress=lijk@infosec.com.cn
+                serial:FD:0A:9E:96:56:27:E5:85
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sm3withsm2
+         30:44:02:20:61:c1:68:64:32:a4:f4:7e:73:71:01:99:c9:cf:
+         bb:17:94:1b:75:95:9c:fa:07:be:2b:67:ed:70:c2:49:61:0d:
+         02:20:72:d4:b2:87:65:7c:c6:5f:d3:9c:df:80:7c:e0:b9:56:
+         0c:66:79:d3:2c:a6:dc:dc:a6:1c:34:88:67:a8:b4:ef
+-----BEGIN CERTIFICATE-----
+MIIDEzCCArqgAwIBAgIQG18U3OQzAUmEsV3qe1UJyzAKBggqgRzPVQGDdTCBgjEL
+MAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUppbmcxEDAOBgNVBAcMB0JlaUppbmcx
+EDAOBgNVBAoMB0luZm9TZWMxDDAKBgNVBAsMA1ImRDELMAkGA1UEAwwCY2ExIjAg
+BgkqhkiG9w0BCQEWE2xpamtAaW5mb3NlYy5jb20uY24wHhcNMTgwMzE2MDgzNTI5
+WhcNMjgwMzEzMDgzNTI5WjCBhjELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUpp
+bmcxEDAOBgNVBAcMB0JlaUppbmcxEDAOBgNVBAoMB0luZm9TZWMxDDAKBgNVBAsM
+A1ImRDEPMA0GA1UEAwwGY2xpZW50MSIwIAYJKoZIhvcNAQkBFhNsaWprQGluZm9z
+ZWMuY29tLmNuMFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEL6YgUrQQ6/YmMik8
+vJHDTXNoYX3X6jmyvRbYJftn+p8vWAw+15WciS6vr1S/irAgpV3ZMKL9OMtlEEhs
+4QiyM6OCAQowggEGMAkGA1UdEwQCMAAwHQYDVR0OBBYEFK1n2CJ2LGNEKpr+Xlyg
+LQm3rPC5MIG3BgNVHSMEga8wgayAFHlfatWKx4PMerPLowZn9qJt1cbwoYGIpIGF
+MIGCMQswCQYDVQQGEwJDTjEQMA4GA1UECAwHQmVpSmluZzEQMA4GA1UEBwwHQmVp
+SmluZzEQMA4GA1UECgwHSW5mb1NlYzEMMAoGA1UECwwDUiZEMQswCQYDVQQDDAJj
+YTEiMCAGCSqGSIb3DQEJARYTbGlqa0BpbmZvc2VjLmNvbS5jboIJAP0KnpZWJ+WF
+MBMGA1UdJQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDAKBggqgRzPVQGDdQNH
+ADBEAiBhwWhkMqT0fnNxAZnJz7sXlBt1lZz6B74rZ+1wwklhDQIgctSyh2V8xl/T
+nN+AfOC5VgxmedMsptzcphw0iGeotO8=
+-----END CERTIFICATE-----

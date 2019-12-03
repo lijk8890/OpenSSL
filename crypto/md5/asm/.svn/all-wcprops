@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/md5/asm
+END
+md5-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/md5/asm/md5-586.pl
+END
+md5-sparcv9.pl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/md5/asm/md5-sparcv9.pl
+END
+md5-ia64.S
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/md5/asm/md5-ia64.S
+END
+md5-x86_64.pl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/md5/asm/md5-x86_64.pl
+END

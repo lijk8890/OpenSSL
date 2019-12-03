@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/krb5
+END
+krb5_asn.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/krb5/krb5_asn.c
+END
+krb5_asn.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/krb5/krb5_asn.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/krb5/Makefile
+END

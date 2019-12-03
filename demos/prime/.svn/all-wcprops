@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/demos/prime
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/demos/prime/Makefile
+END
+prime.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/demos/prime/prime.c
+END

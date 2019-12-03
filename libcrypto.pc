@@ -1,0 +1,13 @@
+prefix=/usr/local/ssl
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.0.2n
+Requires: 
+Libs: -L${libdir} -lcrypto
+Libs.private: -L./ipp/lib/x64/ -L../ipp/lib/x64/ -L../../ipp/lib/x64/ -lippcp -lippcore -ldl
+Cflags: -I${includedir} 

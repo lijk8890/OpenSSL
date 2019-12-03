@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/696/openssl-1.0.2n/crypto/objects
+END
+objects.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/objects.h
+END
+obj_xref.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/obj_xref.c
+END
+obj_mac.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/696/openssl-1.0.2n/crypto/objects/obj_mac.h
+END
+obj_lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/obj_lib.c
+END
+obj_dat.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/obj_dat.c
+END
+obj_xref.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/359/openssl-1.0.2n/crypto/objects/obj_xref.h
+END
+objects.README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/objects.README
+END
+obj_mac.num
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/696/openssl-1.0.2n/crypto/objects/obj_mac.num
+END
+obj_dat.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/696/openssl-1.0.2n/crypto/objects/obj_dat.h
+END
+o_names.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/o_names.c
+END
+objects.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/objects.pl
+END
+obj_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/obj_err.c
+END
+objects.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/695/openssl-1.0.2n/crypto/objects/objects.txt
+END
+objxref.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/objxref.pl
+END
+obj_dat.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/obj_dat.pl
+END
+obj_xref.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/138/openssl-1.0.2n/crypto/objects/obj_xref.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/objects/Makefile
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/demos/pkcs12
+END
+pkwrite.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/demos/pkcs12/pkwrite.c
+END
+pkread.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/demos/pkcs12/pkread.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/demos/pkcs12/README
+END

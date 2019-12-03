@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost
+END
+gost_asn1.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_asn1.c
+END
+gostsum.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gostsum.c
+END
+gost89.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost89.h
+END
+gost_eng.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_eng.c
+END
+e_gost_err.proto
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/e_gost_err.proto
+END
+gost_pmeth.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_pmeth.c
+END
+gost_lcl.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_lcl.h
+END
+gost_ctl.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_ctl.c
+END
+gost_keywrap.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_keywrap.c
+END
+gost2001_keyx.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost2001_keyx.c
+END
+gost2001.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost2001.c
+END
+gost_params.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_params.c
+END
+gosthash.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gosthash.c
+END
+gost.ec
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost.ec
+END
+gost_keywrap.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_keywrap.h
+END
+gost2001_keyx.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost2001_keyx.h
+END
+gost_params.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_params.h
+END
+gosthash.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gosthash.h
+END
+README.gost
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/README.gost
+END
+e_gost_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/e_gost_err.c
+END
+gost94_keyx.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost94_keyx.c
+END
+gost_ameth.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_ameth.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/Makefile
+END
+gost_md.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_md.c
+END
+gost_sign.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_sign.c
+END
+gost_crypt.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost_crypt.c
+END
+gost89.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/gost89.c
+END
+e_gost_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/engines/ccgost/e_gost_err.h
+END

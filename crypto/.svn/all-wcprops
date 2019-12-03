@@ -1,0 +1,353 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/gmssl/!svn/ver/735/openssl-1.0.2n/crypto
+END
+opensslconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/opensslconf.h
+END
+LPdir_vms.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/LPdir_vms.c
+END
+x86cpuid.pl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/x86cpuid.pl
+END
+constant_time_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/constant_time_test.c
+END
+ppccap.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ppccap.c
+END
+ia64cpuid.S
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ia64cpuid.S
+END
+ebcdic.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ebcdic.c
+END
+fips_ers.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/fips_ers.c
+END
+sparc_arch.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/sparc_arch.h
+END
+o_time.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_time.c
+END
+x86_64cpuid.pl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/x86_64cpuid.pl
+END
+LPdir_unix.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/LPdir_unix.c
+END
+fips_err.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/fips_err.h
+END
+ebcdic.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ebcdic.h
+END
+crypto-lib.com
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/crypto-lib.com
+END
+arm_arch.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/arm_arch.h
+END
+o_time.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_time.h
+END
+ossl_typ.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ossl_typ.h
+END
+md32_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/md32_common.h
+END
+o_str.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_str.c
+END
+cryptlib.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/cryptlib.c
+END
+mem_dbg.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mem_dbg.c
+END
+o_str.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_str.h
+END
+o_dir.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_dir.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/Makefile
+END
+cryptlib.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/cryptlib.h
+END
+arm64cpuid.S
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/arm64cpuid.S
+END
+armv4cpuid.S
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/armv4cpuid.S
+END
+cpt_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/cpt_err.c
+END
+LPdir_wince.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/LPdir_wince.c
+END
+ppccpuid.pl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ppccpuid.pl
+END
+o_dir.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_dir.h
+END
+alphacpuid.pl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/alphacpuid.pl
+END
+armcap.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/armcap.c
+END
+opensslconf.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/opensslconf.h.in
+END
+ex_data.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ex_data.c
+END
+s390xcap.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/s390xcap.c
+END
+sparcv9cap.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/sparcv9cap.c
+END
+sparccpuid.S
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/sparccpuid.S
+END
+mem_clr.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mem_clr.c
+END
+mem.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mem.c
+END
+opensslv.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/opensslv.h
+END
+o_fips.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_fips.c
+END
+install-crypto.com
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/install-crypto.com
+END
+o_init.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_init.c
+END
+uid.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/uid.c
+END
+ppc_arch.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ppc_arch.h
+END
+crypto.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/crypto.h
+END
+constant_time_locl.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/constant_time_locl.h
+END
+LPdir_win.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/LPdir_win.c
+END
+pariscid.pl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/pariscid.pl
+END
+symhacks.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/symhacks.h
+END
+cversion.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/cversion.c
+END
+LPdir_nyi.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/LPdir_nyi.c
+END
+o_dir_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/o_dir_test.c
+END
+s390xcpuid.S
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/s390xcpuid.S
+END
+vms_rms.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/vms_rms.h
+END
+LPdir_win32.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/LPdir_win32.c
+END

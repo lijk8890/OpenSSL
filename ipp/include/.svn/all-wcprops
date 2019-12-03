@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include
+END
+ippdefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippdefs.h
+END
+ippvm.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippvm.h
+END
+ippcv_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcv_l.h
+END
+ippcc.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcc.h
+END
+ippversion.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippversion.h
+END
+ippdc.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippdc.h
+END
+ippcore_tl.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcore_tl.h
+END
+ippi_tl.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippi_tl.h
+END
+ippi.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippi.h
+END
+ippcore.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcore.h
+END
+ippch.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippch.h
+END
+ippdefs_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippdefs_l.h
+END
+ippcc_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcc_l.h
+END
+ippcp.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcp.h
+END
+ipps.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ipps.h
+END
+ippcore_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcore_l.h
+END
+ippi_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippi_l.h
+END
+ippcpdefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcpdefs.h
+END
+ipptypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ipptypes.h
+END
+ippcv.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippcv.h
+END
+ippbase.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ippbase.h
+END
+ipps_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ipps_l.h
+END
+ipp.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ipp.h
+END
+ipptypes_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/include/ipptypes_l.h
+END

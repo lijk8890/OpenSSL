@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/demoSRP
+END
+srp_verifier.txt.attr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/demoSRP/srp_verifier.txt.attr
+END
+srp_verifier.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/apps/demoSRP/srp_verifier.txt
+END

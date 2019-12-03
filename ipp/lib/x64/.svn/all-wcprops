@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gmssl/!svn/ver/401/openssl-1.0.2n/ipp/lib/x64
+END
+libippcp.a
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/401/openssl-1.0.2n/ipp/lib/x64/libippcp.a
+END
+ippcpmt.lib
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/lib/x64/ippcpmt.lib
+END
+libippcore.a
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/401/openssl-1.0.2n/ipp/lib/x64/libippcore.a
+END
+ippcoremt.lib
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gmssl/!svn/ver/400/openssl-1.0.2n/ipp/lib/x64/ippcoremt.lib
+END

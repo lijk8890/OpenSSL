@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/des/asm
+END
+des_enc.m4
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/des/asm/des_enc.m4
+END
+desboth.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/des/asm/desboth.pl
+END
+dest4-sparcv9.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/des/asm/dest4-sparcv9.pl
+END
+des-586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/des/asm/des-586.pl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/des/asm/readme
+END
+crypt586.pl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/des/asm/crypt586.pl
+END

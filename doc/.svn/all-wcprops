@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc
+END
+openssl-c-indent.el
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/openssl-c-indent.el
+END
+openssl.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/openssl.txt
+END
+standards.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/standards.txt
+END
+dir-locals.example.el
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/dir-locals.example.el
+END
+openssl-shared.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/openssl-shared.txt
+END
+fingerprints.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/fingerprints.txt
+END
+c-indentation.el
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/c-indentation.el
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/README
+END
+ssleay.txt
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/doc/ssleay.txt
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mdc2
+END
+mdc2test.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mdc2/mdc2test.c
+END
+mdc2_one.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mdc2/mdc2_one.c
+END
+mdc2dgst.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mdc2/mdc2dgst.c
+END
+mdc2.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mdc2/mdc2.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/mdc2/Makefile
+END

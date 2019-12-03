@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/gmssl/!svn/ver/693/openssl-1.0.2n/crypto/ec
+END
+ec_key.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_key.c
+END
+ec_err.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_err.c
+END
+ecp_nistz256_table.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_nistz256_table.c
+END
+ecp_smpl.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_smpl.c
+END
+ec_cvt.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_cvt.c
+END
+ec_print.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_print.c
+END
+ec2_smpl.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec2_smpl.c
+END
+ecp_mont.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_mont.c
+END
+ecp_nist.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_nist.c
+END
+ec_ameth.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_ameth.c
+END
+ec_asn1.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_asn1.c
+END
+ec2_mult.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec2_mult.c
+END
+ecp_nistp224.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_nistp224.c
+END
+ecp_nistp521.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_nistp521.c
+END
+ecp_oct.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_oct.c
+END
+ec_lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_lib.c
+END
+ec2_oct.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec2_oct.c
+END
+eck_prn.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/eck_prn.c
+END
+ecp_nistp256.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_nistp256.c
+END
+ecp_nistputil.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_nistputil.c
+END
+ec_check.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_check.c
+END
+ec_pmeth.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/390/openssl-1.0.2n/crypto/ec/ec_pmeth.c
+END
+ec_lcl.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_lcl.h
+END
+ectest.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ectest.c
+END
+ec_mult.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_mult.c
+END
+ec_curve.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gmssl/!svn/ver/693/openssl-1.0.2n/crypto/ec/ec_curve.c
+END
+ecp_nistz256.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ecp_nistz256.c
+END
+ec.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/Makefile
+END
+ec_oct.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/gmssl/!svn/ver/2/openssl-1.0.2n/crypto/ec/ec_oct.c
+END

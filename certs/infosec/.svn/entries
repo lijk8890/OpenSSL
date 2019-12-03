@@ -1,0 +1,37 @@
+10
+
+dir
+735
+http://192.168.1.151:8080/svn/gmssl/openssl-1.0.2n/certs/infosec
+http://192.168.1.151:8080/svn/gmssl
+
+
+
+2018-03-16T08:59:01.794871Z
+380
+ljk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+40e5ded0-ff03-f947-a6be-0e16b21f8a85
+
+ca
+dir
+
+server
+dir
+
+client
+dir
+
