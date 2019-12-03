@@ -115,17 +115,14 @@ static IppsECCPState* newSM2_ECCP(int bit)
 static Ipp32u* randSM2_Ipp32u(int len, Ipp32u *data)
 {
 #ifdef __linux__
-    FILE *fp = fopen("/dev/urandom", "rb");
-    while(len-- > 0)
+    int i;
+    struct timeval tv;
+
+    for(i = 0; i < len; i++)
     {
-        int rv = fread(&data[len], sizeof(Ipp32u), 1, fp);
-        if(rv <= 0)
-        {
-            fprintf(stderr, "%s:%d - %d:%s\n", __FILE__, __LINE__, errno, strerror(errno));
-            break;
-        }
+        gettimeofday(&tv, NULL);
+        data[i] = (Ipp32u)(tv.tv_sec + tv.tv_usec);
     }
-    if(fp) fclose(fp);
     return data;
 #else
     int i = 0;
